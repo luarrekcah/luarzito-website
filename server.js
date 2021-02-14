@@ -5,12 +5,12 @@ app.use(express.static("public"));
 
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
-  response.sendStatus(200);
+  /*response.sendStatus(200);
   const ping = new Date();
   ping.setHours(ping.getHours() - 3);
   console.log(
     `Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`
-  );
+  );*/
 });
 // PC
 app.get("/comandos", (request, response) => {
@@ -47,10 +47,11 @@ const bot = new Discord.Client();
 const { Util } = require("discord.js");
 const fs = require("fs");
 const firebase = require("firebase");
+const prefixo = "dg."
 
 bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username)
-})
+});
 
 try {
   console.log("Tentando logar na api do dc");
