@@ -3,14 +3,54 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/index.html");
-  /*response.sendStatus(200);
-  const ping = new Date();
-  ping.setHours(ping.getHours() - 3);
-  console.log(
-    `Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`
-  );*/
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/views/index.html");
+ const data = new FormData();
+  console.log(req.body);
+data.append("client_id", "743841329334845530");
+  data.append("client_secret", "k7gj1sbpgm_IAV9TIxU82poDKUqifyDo");
+  data.append("grant_type", "authorization_code");
+  data.append(
+    "redirect_uri",
+    "https://luarzito.glitch.me/dashboard"
+  );
+  data.append("scope", "identify");
+  data.append("code", req.body);
+
+  fetch("https://discordapp.com/api/oauth2/token", {
+    method: "POST",
+    body: data,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      const config = {
+        headers: {
+          authorization: `Bearer ${data.access_token}`,
+        },
+      };
+      axios
+        .get("https://discordapp.com/api/users/@me", config)
+        .then((response) => {
+          console.log(response.data.username);
+          res.send(response.data.username);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+        axios
+        .get("https://discordapp.com/api/users/@me/guilds", config)
+        .then((response) => {
+         // console.log(response.data.username);
+         // res.send(response.data.username);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+    
 });
 // PC
 app.get("/comandos", (request, response) => {
@@ -27,6 +67,11 @@ app.get("/team", (request, response) => {
 
 app.get("/servidores", (request, response) => {
   response.sendFile(__dirname + "/views/servers.html");
+});
+
+
+app.get("/dashboard", (request, response) => {
+  response.sendFile(__dirname + "/views/dashboard.html");
 });
 
 // MOBILE
