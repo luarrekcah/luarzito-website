@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Luarzito</title>
+    <!--CONFIGs INI-->
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/icons/742068003583295619/69f5a6123e68838d4e4d965aa293fb9b.png?size=1024"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      charset="UTF-8"
+    />
+    <!--CONFIGs FIM-->
+    <!--CSS INI-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+    <link href="/css/m/comandos.css" rel="stylesheet" />
+    <!--CSS FIM-->
+    <!--SCRIPT INI-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="script" href="/script.js" />
+    <!--SCRIPT FIM-->
+  </head>
+
+  <body>
+    <!--NAV BAR INI-->
+
+    <div class="nav_bar">
+      <nav class="topmenu d-flex justify-content-center">
+        <a href="https://luarzito.glitch.me/index.html" class="botao_nav"
+          >Home</a
+        >
+        <div class="linha_nav"></div>
+        <div class="line align-self-center"></div>
+        <a href="/views/team.html" class="botao_nav">Team</a>
+        <div class="linha_nav"></div>
+        <a href="/views/emojis.html" class="botao_nav">Emojis</a>
+      </nav>
+      <div
+        class="header d-flex flex-column justify-content-between align-items-center"
+      >
+        <div
+          class="server-info d-flex align-items-center flex-column text-center"
+        >
+          <div class="nome_bot">
+            <b class="bot_name">Luarzito</b>
+            <p class="lite_desc">Um bot para o Discord!</p>
+          </div>
+          <div class="botao_add">
+            <a
+              id="me_add"
+              class="links-suppressor join-btn btn-pill white"
+              href="https://discord.com/oauth2/authorize?client_id=743841329334845530&scope=bot&permissions=8"
+              >Me adicione!</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--NAV BAR FIM-->
+    <div class="corpo">
+      <div class="comandos">
+        <p>
+          Prefíxo atual do bot: <b style="color: white;">lz.</b> | Use
+          lz.setprefix para alterar
+        </p>
+        <p>
+          Digite <b style="color: white;">suggest</b> com o prefíxo para enviar
+          uma sugestão.
+        </p>
+        <p>
+          Comandos com a cor <b style="color: red;">vermelha</b> estão em
+          desenvolvimento ou serão apagados.
+        </p>
+        <!--LINHA DIVISÓRIA INI-->
+        <div class="center">
+          <div class="linha_divisoria"></div>
+        </div>
+        <!--LINHA DIVISÓRIA FIM-->
+        <h3>Comandos para ADM:</h3>
+        <p><b>addemoji</b> - Adicione emoji apartir de um link!</p>
+        <p><b>ban</b> - Bana um usuário indesejado.</p>
+        <p><b>ch</b> - Ferramentas para gestão do canal.</p>
+        <p>
+          <b>clear</b> - Limpe as mensagens do chat, escolha de 1 à 99 ou 200!
+        </p>
+        <p><b>kick</b> - Chute um usuário, ele ainda poderá retornar...</p>
+        <p><b>listban</b> - Receba a lista de bans na DM.</p>
+        <p><b style="color: red;">mute</b> - Em breve...</p>
+        <p><b>say</b> - O que acha de me fazer falar umas coisas? Tente!</p>
+        <p><b>sv</b> - Ferramentas para gestão do servidor.</p>
+        <p>
+          <b>unban</b> - Dê uma segunda chance à aquele renegado... Desbana pelo
+          ID.
+        </p>
+        <!--LINHA DIVISÓRIA INI-->
+        <div class="center">
+          <div class="linha_divisoria"></div>
+        </div>
+        <!--LINHA DIVISÓRIA FIM-->
+        <h3>Comandos de economia:</h3>
+        <p>em breve mais comandos...</p>
+        <p><b>banco</b> - Veja seu saldo bancário.</p>
+        <p>
+          <b>pagar</b> - Está devendo alguém? Ou quer fazer uma doação? Use seu
+          saldo!
+        </p>
+        <p><b>trabalhar</b> - Bom, só assim para conseguir dinheiro, não é?!</p>
+      </div>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos de diversão / diversos:</h3>
+      <p><b>ascii</b> - Palavra em ascii!</p>
+      <p><b>avatar</b> - Quer ver o avatar de algum usuário?</p>
+      <p>
+        <b>bff</b> - Vulgo, Best Friends Forever, veja seu nível de amizade com
+        alguém!
+      </p>
+      <p>
+        <b>conquista</b> - Conquista do Minecraft customizável, da sua forma
+        hehe.
+      </p>
+      <p><b>couple</b> - Quer ver seu couple com alguém, lado à lado?</p>
+      <p><b>m</b> - Sem ideia de músicas para ouvir? Te recomendo umas...</p>
+      <p><b>mc</b> - Informações sobre os usuários de Minecraft e derivados!</p>
+      <p><b>meme</b> - Acho que só tem meme gringo aí...</p>
+      <p><b>mineserver</b> - Informações sobre servidores de Minecraft!</p>
+      <p><b>nickgen</b> - Gerador de nickname, eba!</p>
+      <p>
+        <b>nofap</b> - Ok, por que o bot ainda tem isso? Bom, veja seu nível no
+        nofapKKKK.
+      </p>
+      <p><b>servericon</b> - Veja o ícone do servidor atual.</p>
+      <p><b>serverinfo</b> - Informações sobre o servidor atual.</p>
+      <p><b>ship</b> - Clássico. Shipe duas pessoas, hehe.</p>
+      <p><b>tableflip</b> - AAAHHHH!</p>
+      <p>
+        <b style="color:red;">userinfo</b> - Veja as Informações de um usuário.
+      </p>
+      <p>
+        <b>vdd</b> - Verdade e desafio, use "vdd 18" para perguntas mais
+        legalzinhas, hehe.
+      </p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos de Mini-Game:</h3>
+      <p><b>cf</b> - Clássico cara ou coroa.</p>
+      <p><b>jknpo</b> - Pedra, Papel e Tesoura!</p>
+      <p><b>loteria</b> - Acerte o número valendo 10K de Lennes!</p>
+      <p><b>pescar</b> - Parece pescaria do Minecraft...</p>
+      <p>
+        <b style="color: red;">ppp</b> - Pega, pensa ou passa? Vou apagar o
+        comando em breve ou refazer...
+      </p>
+      <p><b>rr</b> - Será que você tem sorte na... ROLETA RUSSA?!</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos de Infos/Técnicas:</h3>
+      <p>
+        <b>ajuda</b> - Para me adicionar, ver meu servidor, um resumo e meu
+        site!
+      </p>
+      <p><b>botinfo</b> - Minhas Informações, bem útil!</p>
+      <p><b>emojiinfo</b> - Veja as Informações de um emoji.</p>
+      <p>
+        <b style="color: red;">info</b> - Quantidade de servidores, canais e
+        usuários que tenho!
+      </p>
+      <p><b>ping</b> - Todas as minhas Informações técnicas.</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos de Pesquisas:</h3>
+      <p><b>book</b> - Pesquise e ache Informações sobre livros.</p>
+      <p><b>clima</b> - Veja o clima da sua cidade.</p>
+      <p><b>gg</b> - Pesquise imagens, isso é muito útil.</p>
+      <p><b>ipget</b> - Puxe dados de um IP pelo Discord!</p>
+      <p><b>ly</b> - Pesquise as letras de uma música!</p>
+      <p><b>wiki</b> - Faça pesquisas no Wikipedia.</p>
+      <p><b>yt</b> - Pesquise vídeos no YouTube.</p>
+      <p><b>cursed</b> - Bizarro...</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos de RP:</h3>
+      <p>Valendo pontos de amizade | Valorização de RP</p>
+      <p>
+        <b>esfaquear</b> - Dê uma facada em alguém, ele terá um tempo para
+        reagir!
+      </p>
+      <p><b>acordar</b> - Aaaa, acordaaaaa (-_- )</p>
+      <p><b>bater</b> - Cê está merecendo uns tapas!</p>
+      <p><b>cafune</b> - Ownn, dengo.</p>
+      <p><b>f</b> - F to pray respect.</p>
+      <p><b>handshake</b> - Aperto de mão, brow.</p>
+      <p><b>hug</b> - Abraçooo!</p>
+      <p><b>kiss</b> - Beijinho :D</p>
+      <p><b>piscar</b> - Piscadinha para você!</p>
+      <p><b>poke</b> - Ok, me dê atenção!</p>
+      <p><b>putsleep</b> - Já deu hora para dormir, rum!</p>
+      <p><b>smile</b> - Sorrisinhoo!</p>
+      <p><b>tchau</b> - Até logo!</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Comandos sociais:</h3>
+      <p>Em desenvolvimento...</p>
+      <p><b>casar</b> - Se case com sua alma gêmea!</p>
+      <p><b>perfil</b> - Veja seu perfil!</p>
+      <p><b>setimage</b> - Defina um fundo para seu perfil!</p>
+      <p>
+        <b>rep</b> - Dê pontos de reputação para alguém que lhe ajudou, ou fez
+        algo legal.
+      </p>
+      <p><b>bio</b> - Atualize seu "sobre mim".</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+      <h3>Diversos:</h3>
+      <p>
+        <b>catch</b> - Pegue mensagens deletadas. (quem sabe atualizadas também)
+      </p>
+      <p><b>anotar</b> - Faça anotações no pastbin.</p>
+
+      <p><b>carta</b> - Envie uma carta, uma última palavrinha à alguém...</p>
+      <p><b>cartaconfig</b> - Escolha se quer ou não receber cartas.</p>
+      <p><b>embed</b> - Envie uma mensagem em embed.</p>
+      <p><b>emoji</b> - Faça-me usar um emoji.</p>
+      <p><b>ideia</b> - Faça um embed com sua ideia, com direito à votação.</p>
+      <p><b>invite</b> - Me chame ao seu servidor!</p>
+      <p><b>invites</b> - Veja quantos convites tem um usuário.</p>
+      <!--LINHA DIVISÓRIA INI-->
+      <div class="center">
+        <div class="linha_divisoria"></div>
+      </div>
+      <!--LINHA DIVISÓRIA FIM-->
+    </div>
+  </body>
+  <footer>
+    <!--
+  <div class="lado_esquerdo">
+    <h3 class="titulo_lado_e">Redes sociais</h3>
+    <a href="insta" class="footer_redes_sociais">IG</a>
+    <p></p>
+    <a href="tt" class="footer_redes_sociais">TT</a>
+  </div>
+  -->
+    <div class="lado_direito">
+      <h3 class="titulo_lado_d">Desenvolvedor</h3>
+      <p class="desc_lado_d">DEV & CEO | Luar Rekcah</p>
+    </div>
+    <div class="center">
+      <p class="desenvolvido_por">
+        <a href="https://www.instagram.com/_luar.rekcah/">
+          <img
+            id="ig"
+            alt="Instagram @_luar.rekcah"
+            src="https://cdn.discordapp.com/attachments/747520193688764506/786630233456640050/ig.png"
+          />
+        </a>
+        <a href="https://twitter.com/_luarrekcah">
+          <img
+            id="tt"
+            alt="Twitter @_luarrekcah"
+            src="https://curiosamente.diariodepernambuco.com.br/wp-content/uploads/2016/01/TwitterLogo.png"
+          />
+        </a>
+      </p>
+      <!--<img id="ig" class="redes_img" src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png"><a href="#"></a></img>
+      -->
+    </div>
+  </footer>
+</html>
