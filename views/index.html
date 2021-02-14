@@ -25,7 +25,10 @@
     <meta property="og:title" content="Luarzito BOT" />
     <meta name="theme-color" content="#114477" />
     <meta property="og:url" content="https://luarzito.glitch.me/" />
-    <meta property="og:description" content="Página do Luarzito bot, veja meus comandos, resumo e servidor de suporte aqui!" />
+    <meta
+      property="og:description"
+      content="Página do Luarzito bot, veja meus comandos, resumo e servidor de suporte aqui!"
+    />
     <!--CONFIGs INI-->
     <link
       rel="icon"
@@ -78,7 +81,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <link rel="script" href="script.js" />
+    <link rel="script" href="index.js" />
     <!--SCRIPT FIM-->
   </head>
 
@@ -123,37 +126,35 @@
     <!--NAV BAR FIM-->
     <div class="corpo">
       <!--SOBRE DESC INI-->
-      <div class="teste_jquery"> 
+      <div class="teste_jquery">
         <script type="text/javascript" src="discord.11.1.0.min.js"></script>
-    <script type="text/javascript">
-      const bot = new Discord.Client();
-      const luarzito = bot.users.cache.get("743841329334845530")
-      let avatarL = user.avatarURL({ dynamic: true, format: "png", size: 1024 });
-      
-  const status = {
-    online: "🟢 Online",
-    offline: "⚫ Offline"
-  };
-      
-      if (luarzito.user.presence.status) {
-   
-      document.write(
-        `<p>${status[bot.user.presence.status]}</p>`)
-      
-    
-  }
+        <script type="text/javascript">
+          const bot = new Discord.Client();
+          const luarzito = bot.users.cache.get("743841329334845530");
+          let avatarL = user.avatarURL({
+            dynamic: true,
+            format: "png",
+            size: 1024
+          });
 
+          const status = {
+            online: "🟢 Online",
+            offline: "⚫ Offline"
+          };
+          console.log(avatarL);
+          if (luarzito.user.presence.status) {
+            document.write(`<p>${status[luarzito.user.presence.status]}</p>`);
+          }
 
-      bot.login(process.env.tokenBot);
-    </script>
+          bot.login(process.env.tokenBot);
+        </script>
       </div>
       <section id="sobre">
-        
         <h2>Sobre🤔</h2>
         <p>
-          <b style="color:white;">Luarzito</b>&nbsp;é um bot para o discord, com intenção de levar
-          diversão com seus comandos de mini-game, um pouco de moderação,
-          interações diversas e um pouco de RP!<br /><br /><b
+          <b style="color:white;">Luarzito</b>&nbsp;é um bot para o discord, com
+          intenção de levar diversão com seus comandos de mini-game, um pouco de
+          moderação, interações diversas e um pouco de RP!<br /><br /><b
             >Este é um bot em beta, com mais de 70 comandos! </b
           ><br />
         </p>
@@ -162,8 +163,11 @@
       <!--LINHA DIVISÓRIA INI-->
       <div class="center">
         <a href="https://top.gg/bot/743841329334845530">
-    <img src="https://top.gg/api/widget/743841329334845530.svg" alt="Luarzito" />
-</a>
+          <img
+            src="https://top.gg/api/widget/743841329334845530.svg"
+            alt="Luarzito"
+          />
+        </a>
       </div>
       <div class="center">
         <div class="linha_divisoria"></div>
