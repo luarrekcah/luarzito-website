@@ -1,1 +1,3 @@
-document.write("<p>OIIII</p>");
+document.getElementById(
+              "teste"
+            ).innerText = `roiii`;
