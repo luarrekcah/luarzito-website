@@ -1,3 +1,1 @@
-document.getElementById(
-              "teste"
-            ).innerText = `roiii`;
+document.getElementById("teste").innerText = `roiii`;
