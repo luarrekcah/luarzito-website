@@ -81,7 +81,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <link rel="script" href="index.js" />
+    <link rel="script" href="/index.js" />
     <!--SCRIPT FIM-->
   </head>
 
@@ -128,26 +128,21 @@
       <!--SOBRE DESC INI-->
       <div class="teste_jquery">
         <script type="text/javascript" src="discord.11.1.0.min.js"></script>
-        <script type="text/javascript">
-          const bot = new Discord.Client();
-          const luarzito = bot.users.cache.get("743841329334845530");
-          let avatarL = user.avatarURL({
-            dynamic: true,
-            format: "png",
-            size: 1024
-          });
+    <script type="text/javascript">
+      const client = new Discord.Client();
 
-          const status = {
-            online: "🟢 Online",
-            offline: "⚫ Offline"
-          };
-          console.log(avatarL);
-          if (luarzito.user.presence.status) {
-            document.write(`<p>${status[luarzito.user.presence.status]}</p>`);
-          }
+      client.on("message", msg => {
+        const guildTag =
+          msg.channel.type === "text" ? `[${msg.guild.name}]` : "[DM]";
+        const channelTag =
+          msg.channel.type === "text" ? `[#${msg.channel.name}]` : "";
+        console.log(
+          `${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`
+        );
+      });
 
-          bot.login(process.env.tokenBot);
-        </script>
+      client.login(process.env.tokenBot);
+    </script>
       </div>
       <section id="sobre">
         <h2>Sobre🤔</h2>
