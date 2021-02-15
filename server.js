@@ -106,7 +106,7 @@ bot.on("ready", () => {
 
 try {
   console.log("Tentando logar na api do dc");
-  bot.login(process.env.tokenBot);
+ bot.login(process.env.tokenBot);
 } catch (e) {
   console.log("Erro ao logar na api do dc: ", e);
 }

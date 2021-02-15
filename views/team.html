@@ -31,6 +31,7 @@
     <!-- Scripte
     <script src="/script.js" defer></script>
     -->
+    <script type="text/javascript" src="discord.12.5.1.min.js"></script>
   </head>
   <body>
   
@@ -40,15 +41,18 @@
       >
         <nav class="topmenu d-flex justify-content-center">
           
-          <script type="text/javascript">
-      const bot = new Discord.Client();
+         
+<script type="text/javascript">
+  const client = new Discord.Client();
 
-     const luar = bot.users.cache.get("701953428510736396")
-     
-     const luarAvatar = 
+  client.on('message', msg => {
+    const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]';
+    const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : '';
+    console.log(`${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`);
+  });
 
-      bot.login(process.env.tokenBot);
-    </script>
+  client.login(process.env.tokenBot);
+</script>
   
   <div class="container">
     <div class="card">
