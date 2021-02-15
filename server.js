@@ -61,6 +61,7 @@ app.post("/dashboard", (req, res) => {
         .then(response => {
           console.log(response.data.username);
           res.send(response.data.username);
+        res.send(response.data);
           console.log(response.data);
         })
         .catch(error => {
