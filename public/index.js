@@ -1,1 +1,1 @@
-document.getElementById("teste").innerText = `roiii`;
+console.log("Olá, o que faz aqui?")
