@@ -101,6 +101,21 @@ const fs = require("fs");
 const firebase = require("firebase");
 const prefixo = "dg.";
 
+
+var configF = {
+  apiKey: process.env.FB_apiKey,
+  authDomain: process.env.FB_authDomain,
+  databaseURL: process.env.FB_databaseURL,
+  projectId: process.env.FB_projectID,
+  storageBucket: process.env.FB_storageBucket,
+  messagingSenderId: process.env.FB_messagingSenderId,
+  appId: process.env.FB_appId
+};
+
+firebase.initializeApp(configF);
+
+const database = firebase.database();
+
 bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username);
 });
@@ -120,7 +135,7 @@ bot.on("message", async message => {
       message.channel.send(
         "Olá <@" +
           message.author +
-          ">! Me chamo Kira Cuin e o meu prefixo é `k.`"
+          ">! Me chamo Data Gran e o meu prefixo é `dg.`"
       );
     } else {
       return;
@@ -134,7 +149,7 @@ bot.on("message", async message => {
 */
   let args = message.content.split(" ").slice(1);
   let command = message.content.split(" ")[0];
-  //command = command.slice(config.prefix.length);
+  command = command.slice(process.env.prefixo.length);
 
   try {
     let commandFile = require(`./comandos/${command}.js`);
