@@ -47,7 +47,7 @@ dbref
   }
 })
 */
-const p1 = {
+export const p1 = {
   //P1 === Raul / Luar Rekcah
   avatar:
     "https://cdn.discordapp.com/avatars/701953428510736396/ec3f48a1870024894c42825d8eee0e97.png?size=1024",
