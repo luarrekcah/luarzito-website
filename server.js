@@ -119,6 +119,16 @@ firebase.initializeApp(configF);
 */
 bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username);
+  
+  const atividades = [
+    ["o site do luarzito", "LISTENING"]
+  ];
+  setInterval(async () => {
+    // controlar o intervalo
+    let i = Math.floor(Math.random() * atividades.length + 1) - 1;
+    await bot.user.setActivity(atividades[i][0], { type: atividades[i][1] });
+  }, 10000); // intervalo
+
 });
 
 bot.on("message", async message => {
