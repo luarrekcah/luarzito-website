@@ -1,6 +1,5 @@
 //const firebase = require("firebase");
 //const database = firebase.database();
-
 function w(i) {
   document.write(i);
 }
