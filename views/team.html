@@ -42,18 +42,8 @@
         <nav class="topmenu d-flex justify-content-center">
           
          
-<script type="text/javascript">
-  const client = new Discord.Client();
+<script src="/js/team.js"></script>
 
-  client.on('message', msg => {
-    const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]';
-    const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : '';
-    console.log(`${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`);
-  });
-
-  client.login(process.env.tokenBot);
-</script>
-  <script src="/js/team.js"></script>
   <div class="container">
     <div class="card">
       <div class="imgBx">

@@ -1,1 +1,1 @@
-document.write("<p>Teste</p>")
+const Discord = require("discord.js");

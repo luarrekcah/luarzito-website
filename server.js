@@ -9,6 +9,7 @@ const process = require("process");
 app.use(bodyParser.text());
 
 app.use(express.static("public"));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
