@@ -1,5 +1,5 @@
-
-const database = firebase.database();
+//const firebase = require("firebase");
+//const database = firebase.database();
 
 function w(i) {
   document.write(i);
@@ -30,7 +30,7 @@ function card(id) {
     </div>
     `);
 }
-
+/*
 if (!firebase.apps.length) {
   firebase.initializeApp(firebase);
 }
@@ -45,6 +45,9 @@ dbref
       return w("Parece que não temos staffs no momento... Além do CEO, é claro.")
   } else {
     
+  }
+})
+*/
 const p1 = {
   //P1 === Raul / Luar Rekcah
   avatar:
@@ -79,6 +82,3 @@ const p3 = {
 card(p1);
 card(p2);
 card(p3);
-
-  }
-})
