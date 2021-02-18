@@ -105,6 +105,45 @@ bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username);
 });
 
+bot.on("message", async message => {
+  /*if (message.author.bot) return;
+  if (message.channel.type === "dm") return;
+  if (!message.content.startsWith(config.prefix)) {
+    //coloca aq
+    if (message.mentions.has(bot.user.id)) {
+      if (
+        message.content.includes("@here") ||
+        message.content.includes("@everyone")
+      )
+        return;
+      if(message.content.length !== 21 && message.content.length !== 22) return;
+      message.channel.send(
+        "Olá <@" +
+          message.author +
+          ">! Me chamo Kira Cuin e o meu prefixo é `k.`"
+      );
+    } else {
+      return;
+    }
+  }
+  if (
+    message.content.startsWith(`<@!${bot.user.id}`) ||
+    message.content.startsWith(`<@${bot.user.id}`)
+  )
+    return;
+*/
+  let args = message.content.split(" ").slice(1);
+  let command = message.content.split(" ")[0];
+  //command = command.slice(config.prefix.length);
+
+  try {
+    let commandFile = require(`./comandos/${command}.js`);
+    return commandFile.run(bot, message, args);
+  } catch (err) {
+    console.log("erro: " + err);
+  }
+});
+
 try {
   console.log("Tentando logar na api do dc");
  bot.login(process.env.tokenBot);
