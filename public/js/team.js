@@ -1,19 +1,22 @@
+const firebase = require("firebase");
+
 function w(i) {
   document.write(i);
 }
-function card(avatar, nome, cargo, redeSocialLink, redeSocialIcone) {
+
+function card(id) {
   w(`
   <div class="card">
       <div class="imgBx">
-        <img src="${avatar}">
+        <img src="${id.avatar}">
       </div>
       <div class="details">
         <div class="content">
-          <h2>${nome}<br><span>${cargo}</span></h2>
+          <h2>${id.nome}<br><span>${id.cargo}</span></h2>
           <ul>
-            <li><a href="${redeSocialLink}">
+            <li><a href="${id.redeSocialLink}">
               <img
-                src="${redeSocialIcone}"
+                src="${id.redeSocialIcone}"
                 width="25"
                 weight="25"
               />
@@ -26,6 +29,16 @@ function card(avatar, nome, cargo, redeSocialLink, redeSocialIcone) {
     </div>
     `);
 }
+
+var configF = {
+  apiKey: process.env.FB_apiKey,
+  authDomain: process.env.FB_authDomain,
+  databaseURL: process.env.FB_databaseURL,
+  projectId: process.env.FB_projectID,
+  storageBucket: process.env.FB_storageBucket,
+  messagingSenderId: process.env.FB_messagingSenderId,
+  appId: process.env.FB_appId
+};
 
 const p1 = { //P1 === Raul / Luar Rekcah
   avatar: "https://cdn.discordapp.com/avatars/701953428510736396/ec3f48a1870024894c42825d8eee0e97.png?size=1024",
@@ -52,8 +65,6 @@ const p3 = { //P3 === Angel
 
 //Cards
 
-card(p1.avatar, p1.nome, p1.cargo, p1.redeSocialLink, p1.redeSocialIcone);
-
-card(p2.avatar, p2.nome, p2.cargo, p2.redeSocialLink, p2.redeSocialIcone);
-
-card(p3.avatar, p3.nome, p3.cargo, p3.redeSocialLink, p3.redeSocialIcone);
+card(p1);
+card(p2);
+card(p3);
