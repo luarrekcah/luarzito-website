@@ -101,7 +101,7 @@ const fs = require("fs");
 const firebase = require("firebase");
 const prefixo = "dg.";
 
-
+/*
 var configF = {
   apiKey: process.env.FB_apiKey,
   authDomain: process.env.FB_authDomain,
@@ -112,10 +112,11 @@ var configF = {
   appId: process.env.FB_appId
 };
 
-firebase.initializeApp(configF);
 
 const database = firebase.database();
 
+firebase.initializeApp(configF);
+*/
 bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username);
 });
