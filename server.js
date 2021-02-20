@@ -179,8 +179,9 @@ try {
 } catch (e) {
   console.log("Erro ao logar na api do dc: ", e);
 }
-app.use(function (req, res) {
-    res.status(404).render('Error');
+
+app.get('*', function(req, res){
+   res.sendFile(__dirname + "/views/404.html", 404);
 });
 
 const listener = app.listen(process.env.PORT, () => {
