@@ -35,9 +35,9 @@
           req.onload = () => {
             document.getElementById(
               "display_result"
-            ).innerText = `Seu nome é ${JSON.parse(req.response)[0]}`;
+            ).innerText = `Seu nome é ${req.response[0]}`;
           };
-          console.log(JSON.parse(req.response));
+          console.log(req);
         }
       };
     </script>
