@@ -181,7 +181,8 @@ try {
 }
 
 app.get('*', function(req, res){
-   res.sendFile(__dirname + "/views/404.html", 404);
+   //res.sendFile(__dirname + "/views/404.html", 404);
+  res.sendFile(__dirname + "/views/index.html", 404);
 });
 
 const listener = app.listen(process.env.PORT, () => {
