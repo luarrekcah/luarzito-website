@@ -1,5 +1,8 @@
 //const firebase = require("firebase");
 //const database = firebase.database();
+module.exports.run = async (Discord) => {
+  
+}
 function w(i) {
   document.write(i);
 }
