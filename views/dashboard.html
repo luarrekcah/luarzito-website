@@ -32,9 +32,6 @@
       
           req.open("POST", "https://luarzito.glitch.me/dashboard");
           req.send(code);
-          var string = req.response;
-          var array = JSON.parse("[" + string + "]");
-          console.log(array)
           req.onload = () => {
             document.getElementById(
               "display_result"
