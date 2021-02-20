@@ -29,7 +29,7 @@
 
         if (location.href.indexOf("code") > -1) {
           const req = new XMLHttpRequest();
-          let user = JSON.parse(req.response);
+          const user = JSON.parse(req.response);
           req.open("POST", "https://luarzito.glitch.me/dashboard");
           req.send(code);
           req.onload = () => {
@@ -37,7 +37,8 @@
               "display_result"
             ).innerText = `Seu nome é ${user.username}`;
           };
-          console.log(user)
+          console.log(req)
+          console.log(users)
         }
       };
     </script>
