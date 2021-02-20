@@ -82,6 +82,8 @@ app.post("/dashboard", (req, res) => {
     });
 });
 
+
+
 // MOBILE
 
 app.get("/mobile", (request, response) => {
@@ -177,6 +179,9 @@ try {
 } catch (e) {
   console.log("Erro ao logar na api do dc: ", e);
 }
+app.use(function (req, res) {
+    res.status(404).render('Error');
+});
 
 const listener = app.listen(process.env.PORT, () => {
   console.log("Porta " + listener.address().port);

@@ -12,7 +12,7 @@ window.onload = () => {
     req.onload = () => {
       document.getElementById(
         "display_result"
-      ).innerText = `Dados ${req.response}`;
+      ).innerText = `${req.response}`;
     };
     console.log(req);
   }
