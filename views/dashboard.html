@@ -29,18 +29,15 @@
 
         if (location.href.indexOf("code") > -1) {
           const req = new XMLHttpRequest();
-          var text = "";
-          var obj = JSON.parse(text);
-          console.log("esse é o responde do req: " + text);
-          console.log("esse é o obj: " + obj);
+      
           req.open("POST", "https://luarzito.glitch.me/dashboard");
           req.send(code);
           req.onload = () => {
             document.getElementById(
               "display_result"
-            ).innerText = `Seu nome é ${obj}`;
+            ).innerText = `Seu nome é ${JSON.parse(req.response)[0]}`;
           };
-          console.log(req);
+          console.log(JSON.parse(req.response));
         }
       };
     </script>
