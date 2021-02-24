@@ -72,7 +72,7 @@ const p2 = {
 const p3 = {
   //P3 === Angel
   avatar:
-    "https://cdn.discordapp.com/avatars/740298343783202865/af5ed8f7b92b5ce487d05048953925b1.png?size=1024",
+    "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
   nome: "Angel ツ#3912",
   cargo: "COO",
   redeSocialLink: "",
