@@ -1,8 +1,5 @@
 //const firebase = require("firebase");
 //const database = firebase.database();
-module.exports.run = async (Discord) => {
-  
-}
 function w(i) {
   document.write(i);
 }
@@ -11,7 +8,7 @@ function card(id) {
   w(`
   <div class="card">
       <div class="imgBx">
-        <img id="imggg" src="${id.avatar}">
+        <img src="${id.avatar}">
       </div>
       <div class="details">
         <div class="content">
@@ -32,6 +29,7 @@ function card(id) {
     </div>
     `);
 }
+
 window.onload = () => {
   const code = location.href.substring(
     location.href.indexOf("code") + 5,
@@ -41,10 +39,11 @@ window.onload = () => {
   if (location.href.indexOf("code") > -1) {
     const req = new XMLHttpRequest();
 
-    req.open("POST", "https://luarzito.glitch.me/dashboard");
+    req.open("POST", "https://luarzito.glitch.me/team");
     req.send(code);
     req.onload = () => {
-      //req.response
+      console.log(req.response)
+      
     };
     console.log(req);
   }
@@ -68,37 +67,38 @@ dbref
   }
 })
 */
-export const p1 = {
-  //P1 === Raul / Luar Rekcah
-  avatar:
-    "https://cdn.discordapp.com/avatars/701953428510736396/ec3f48a1870024894c42825d8eee0e97.png?size=1024",
-  nome: "Raul ᵈᵃ ᵇⁱᵃʰ ♡⃤ 🦋⃤#5811",
-  cargo: "CEO | Desenvolvedor",
-  redeSocialLink: "",
-  redeSocialIcone: ""
-};
-const p2 = {
-  //P2 === Bia
-  avatar:
-    "https://cdn.discordapp.com/avatars/666382842338607134/717e3b944e95a8e20f03989e358a01c5.png?size=1024",
-  nome: "Biah ᵈᵒ ʳᵃᵘˡ ♡⃤ 🦋⃤#1112",
-  cargo: "CPO",
-  redeSocialLink: "",
-  redeSocialIcone: ""
-};
 
-const p3 = {
-  //P3 === Angel
-  avatar:
-    "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
-  nome: "Angel ツ#3912",
-  cargo: "COO",
-  redeSocialLink: "",
-  redeSocialIcone: ""
-};
+const p1 = {
+        //P1 === Raul / Luar Rekcah
+        avatar:
+          "https://cdn.discordapp.com/avatars/701953428510736396/8f7c67027d267a293c4a8d74a69f00e4.png?size=2048",
+        nome: "Raul ᵈᵃ ᵇⁱᵃʰ ♡⃤ 🦋⃤#5811",
+        cargo: "CEO | Desenvolvedor",
+        redeSocialLink: "",
+        redeSocialIcone: ""
+      };
+      const p2 = {
+        //P2 === Bia
+        avatar: `https://cdn.discordapp.com/avatars/666382842338607134/d82c0c8e2de1449a0653e33cd3a620f2.png?size=2048`,
+        nome: "Biah ᵈᵒ ʳᵃᵘˡ ♡⃤ 🦋⃤#1112",
+        cargo: "CPO",
+        redeSocialLink: "",
+        redeSocialIcone: ""
+      };
 
-//Cards
+      const p3 = {
+        //P3 === Angel
+        avatar:
+          "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
+        nome: "Angel ツ#3912",
+        cargo: "COO",
+        redeSocialLink: "",
+        redeSocialIcone: ""
+      };
 
-card(p1);
-card(p2);
-card(p3);
+      //Cards
+
+      card(p1);
+      card(p2);
+      card(p3);
+      
