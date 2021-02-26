@@ -131,7 +131,17 @@ bot.on("ready", () => {
     let i = Math.floor(Math.random() * atividades.length + 1) - 1;
     await bot.user.setActivity(atividades[i][0], { type: atividades[i][1] });
   }, 10000); // intervalo
+  
+  const biah = bot.users.cache.get("666382842338607134");
+  
+  const luarrekcah = bot.users.cache.get("701953428510736396");
+  
+  console.log(biah);
 
+app.post("/team", (req, res) => {
+  res.send()
+});
+  
 });
 
 bot.on("message", async message => {
