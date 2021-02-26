@@ -40,6 +40,9 @@ b {
   position: relative;
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all ease 300ms;
 }
 
 .nome_bot {

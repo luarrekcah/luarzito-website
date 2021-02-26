@@ -39,7 +39,7 @@ app.post("/dashboard", (req, res) => {
   const data = new FormData();
   console.log(req.body);
   data.append("client_id", "743841329334845530");
-  data.append("client_secret", "k7gj1sbpgm_IAV9TIxU82poDKUqifyDo");
+  data.append("client_secret", process.env.clientSecret);
   data.append("grant_type", "authorization_code");
   data.append("redirect_uri", "https://luarzito.glitch.me/dashboard");
   data.append("scope", "identify");
