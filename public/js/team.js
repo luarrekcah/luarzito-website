@@ -11,7 +11,7 @@ function card(id) {
   w(`
   <div class="card">
       <div class="imgBx">
-        <img src="${id.avatar}">
+        <img id="imggg" src="${id.avatar}">
       </div>
       <div class="details">
         <div class="content">
@@ -32,6 +32,24 @@ function card(id) {
     </div>
     `);
 }
+window.onload = () => {
+  const code = location.href.substring(
+    location.href.indexOf("code") + 5,
+    location.href.length
+  );
+
+  if (location.href.indexOf("code") > -1) {
+    const req = new XMLHttpRequest();
+
+    req.open("POST", "https://luarzito.glitch.me/dashboard");
+    req.send(code);
+    req.onload = () => {
+      //req.response
+    };
+    console.log(req);
+  }
+};
+
 /*
 if (!firebase.apps.length) {
   firebase.initializeApp(firebase);
