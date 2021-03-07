@@ -7,6 +7,7 @@ const FormData = require("form-data");
 const axios = require("axios");
 const process = require("process");
 app.use(bodyParser.text());
+const wa = require("./wa.js");
 
 app.use(express.static("public"));
 //app.use(express.static(path.join(__dirname, 'public')));
@@ -30,7 +31,6 @@ app.get("/team", (request, response) => {
 app.get("/servidores", (request, response) => {
   response.sendFile(__dirname + "/views/servers.html");
 });
-
 
 app.get("/dashboard", (request, response) => {
   response.sendFile(__dirname + "/views/dashboard.html");
@@ -61,9 +61,9 @@ app.post("/dashboard", (req, res) => {
         .get("https://discordapp.com/api/users/@me", config)
         .then(response => {
           console.log(response.data.username);
-       
+
           res.send(response.data);
-          
+
           console.log(response.data);
         })
         .catch(error => {
@@ -81,8 +81,6 @@ app.post("/dashboard", (req, res) => {
         });
     });
 });
-
-
 
 // MOBILE
 
@@ -122,28 +120,70 @@ firebase.initializeApp(configF);
 */
 bot.on("ready", () => {
   console.log("Bot preparado.\nLogado como: " + bot.user.username);
-  
-  const atividades = [
-    ["o site do luarzito", "LISTENING"]
-  ];
+
+  const atividades = [["o site do luarzito", "LISTENING"]];
   setInterval(async () => {
     // controlar o intervalo
     let i = Math.floor(Math.random() * atividades.length + 1) - 1;
     await bot.user.setActivity(atividades[i][0], { type: atividades[i][1] });
   }, 10000); // intervalo
-  console.log("aguardando o bot ficar preparado")
+  console.log("aguardando o bot ficar preparado");
 
-app.post("/team", (req, res) => {
-  const biah = bot.users.cache.get("666382842338607134");
-  
-  const luarrekcah = bot.users.cache.get("701953428510736396");
- 
-  res.send(biah.avatar)
-});
-  
+  app.post("/team", (req, res) => {
+    const biah = bot.users.cache.get("666382842338607134");
+
+    const luarrekcah = bot.users.cache.get("701953428510736396");
+
+    res.send(biah.avatar);
+  });
 });
 
 bot.on("message", async message => {
+  let msg = message;
+
+  /*if (msg.attachments.length == 0) {
+    return;
+  }
+  var image = msg.attachments[0].url;*/
+  
+  var image = message.content;
+
+  const b64 = await wa.imgtob64(image);
+  var json = {};
+  try {
+    json = await wa.callapi(b64);
+  } catch (e) {
+    message.channel.send("Nao encontrado");
+
+    return;
+  }
+
+  const anime = await wa.parsejson(json);
+  message.channel.send(
+    anime.title_romaji
+  ); /*
+    bot.createMessage(msg.channel.id, {
+        embed: {
+            author: {
+                name: msg.author.username,
+                icon_url: msg.author.avatarURL
+            },
+            url: anime.link,
+            title: anime.title_romaji,
+            color: 0xFF0000,
+            fields: [
+                { name: "Romaji title", value: anime.title_romaji, inline: true },
+                { name: "Japanese title", value: anime.title_japanese, inline: false },
+                { name: "Episode", value: anime.episode, inline: false },
+                { name: "At", value: anime.at, inline: true } 
+            ],
+            footer: { 
+                text: "Anime found with trace.moe",
+                icon_url: "https://trace.moe/favicon.png"
+            },
+            thumbnail: { url: image }
+        }*/
+
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
   if (!message.content.startsWith(process.env.prefixo)) {
@@ -154,7 +194,8 @@ bot.on("message", async message => {
         message.content.includes("@everyone")
       )
         return;
-      if(message.content.length !== 21 && message.content.length !== 22) return;
+      if (message.content.length !== 21 && message.content.length !== 22)
+        return;
       message.channel.send(
         "Olá <@" +
           message.author +
@@ -184,13 +225,13 @@ bot.on("message", async message => {
 
 try {
   console.log("Tentando logar na api do dc");
- bot.login(process.env.tokenBot);
+  bot.login(process.env.tokenBot);
 } catch (e) {
   console.log("Erro ao logar na api do dc: ", e);
 }
 
-app.get('*', function(req, res){
-   //res.sendFile(__dirname + "/views/404.html", 404);
+app.get("*", function(req, res) {
+  //res.sendFile(__dirname + "/views/404.html", 404);
   res.sendFile(__dirname + "/views/index.html", 404);
 });
 
@@ -198,5 +239,4 @@ const listener = app.listen(process.env.PORT, () => {
   console.log("Porta " + listener.address().port);
 });
 
-
-module.exports = app, Discord;
+(module.exports = app), Discord;
