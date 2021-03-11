@@ -7,7 +7,6 @@ const FormData = require("form-data");
 const axios = require("axios");
 const process = require("process");
 app.use(bodyParser.text());
-const wa = require("./wa.js");
 
 app.use(express.static("public"));
 //app.use(express.static(path.join(__dirname, 'public')));
@@ -145,7 +144,7 @@ bot.on("message", async message => {
     return;
   }
   var image = msg.attachments[0].url;*/
-  
+
   var image = message.content;
 
   const b64 = await wa.imgtob64(image);
