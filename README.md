@@ -1,30 +1,11 @@
-# hello-express
+# Website do Luarzito com bot integrado
 
-A server that serves a webpage, its resources, and some data
+[Site](https://luarzito.glitch.me/) do bot, veja os comandos e mais algumas outras coisinhas!
 
+Entre no nosso [servidor](https://discord.gg/XKHcPa4fde) do Discord!
 
-## Your Project
+Desenvolvedor: [![Discord Bots](https://top.gg/api/widget/owner/743841329334845530.svg?noavatar=true)](https://top.gg/bot/743841329334845530)
 
-On the front-end,
+Status do BOT: [![Discord Bots](https://top.gg/api/widget/status/743841329334845530.svg?noavatar=true)](https://top.gg/bot/743841329334845530)
 
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
-
-
-## Made by [Glitch](https://glitch.com/)
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+Quantidade de servidores com o BOT: [![Discord Bots](https://top.gg/api/widget/servers/743841329334845530.svg?noavatar=true)](https://top.gg/bot/743841329334845530)
