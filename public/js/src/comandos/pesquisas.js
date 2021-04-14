@@ -1,6 +1,6 @@
 //Finalizado
 
-const comandos = [
+const comandosPes = [
   ["book ", "Pesquise e ache Informações sobre livros."],
   ["clima", "Veja o clima da sua cidade."],
   ["image", "Pesquise imagens, isso é muito útil."],
@@ -16,8 +16,8 @@ function comando(cmd, desc) {
   document.write(`<p><b>${cmd}</b> - ${desc}</p>`);
 }
 
-let i = 0;
+let iPes = 0;
 
-for (i = 0; i < comandos.length; i++) {
-  comando(comandos[i][0], comandos[i][1]);
+for (iPes = 0; iPes < comandosPes.length; iPes++) {
+  comando(comandosPes[iPes][0], comandosPes[iPes][1]);
 }

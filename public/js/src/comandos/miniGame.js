@@ -1,6 +1,6 @@
 //Finalizado
 
-const comandos = [
+const comandosMG = [
   ["cf", "Clássico cara ou coroa."],
   ["jknpo", "Pedra, Papel e Tesoura!"],
   ["loteria", "Acerte o número valendo 10K de Lennes!"],
@@ -13,8 +13,8 @@ function comando(cmd, desc) {
   document.write(`<p><b>${cmd}</b> - ${desc}</p>`);
 }
 
-let i = 0;
+let iMG = 0;
 
-for (i = 0; i < comandos.length; i++) {
-  comando(comandos[i][0], comandos[i][1]);
+for (iMG = 0; iMG < comandosMG.length; iMG++) {
+  comando(comandosMG[iMG][0], comandosMG[iMG][1]);
 }

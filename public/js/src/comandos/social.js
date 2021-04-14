@@ -1,4 +1,4 @@
-const comandos = [
+const comandosSo = [
   ["", ""],
   ["", ""],
   ["", ""],
@@ -9,8 +9,8 @@ function comando(cmd, desc) {
   document.write(`<p><b>${cmd}</b> - ${desc}</p>`);
 }
 
-let i = 0;
+let iSo = 0;
 
-for (i = 0; i < comandos.length; i++) {
-  comando(comandos[i][0], comandos[i][1]);
+for (iSo = 0; iSo < comandosSo.length; iSo++) {
+  comando(comandosSo[iSo][0], comandosSo[iSo][1]);
 }
