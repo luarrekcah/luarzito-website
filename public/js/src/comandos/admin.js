@@ -1,3 +1,5 @@
+//Finalizado
+
 const comandos = [
   ["addemoji", "Adicione emoji apartir de um link!"],
   ["ban", "Bana um usuário indesejado."],

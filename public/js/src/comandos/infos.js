@@ -1,3 +1,5 @@
+//Finalizado
+
 const comandos = [
   ["ajuda", "Para me adicionar, ver meu servidor, um resumo e meu site!"],
   ["botinfo", "Minhas Informações, bem útil!"],

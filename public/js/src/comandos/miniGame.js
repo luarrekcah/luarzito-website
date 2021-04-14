@@ -1,3 +1,5 @@
+//Finalizado
+
 const comandos = [
   ["cf", "Clássico cara ou coroa."],
   ["jknpo", "Pedra, Papel e Tesoura!"],

@@ -1,3 +1,5 @@
+//Finalizado
+
 const comandos = [
   ["book ", "Pesquise e ache Informações sobre livros."],
   ["clima", "Veja o clima da sua cidade."],

@@ -1,4 +1,6 @@
-const comandos = [
+//Finalizado
+
+const comandosFun = [
   ["ascii", "Palavra em ascii!"],
   ["avatar", "Quer ver o avatar de algum usuário?"],
   ["bff", "Vulgo, Best Friends Forever, veja seu nível de amizade com alguém!"],
@@ -17,9 +19,9 @@ function comando(cmd, desc) {
   document.write(`<p><b>${cmd}</b> - ${desc}</p>`);
 }
 
-let i = 0;
+let iFun = 0;
 
-for (i = 0; i < comandos.length; i++) {
-  comando(comandos[i][0], comandos[i][1]);
+for (iFun = 0; iFun < comandosFun.length; iFun++) {
+  comando(comandosFun[iFun][0], comandosFun[iFun][1]);
 }
 
