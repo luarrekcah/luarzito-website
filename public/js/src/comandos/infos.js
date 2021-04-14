@@ -1,6 +1,6 @@
 //Finalizado
 
-const comandos = [
+const comandosInfo = [
   ["ajuda", "Para me adicionar, ver meu servidor, um resumo e meu site!"],
   ["botinfo", "Minhas Informações, bem útil!"],
   ["emojiinfo", "Veja as Informações de um emoji."],
@@ -16,8 +16,10 @@ function comando(cmd, desc) {
   document.write(`<p><b>${cmd}</b> - ${desc}</p>`);
 }
 
-let i = 0;
+let iInfo = 0;
 
-for (i = 0; i < comandos.length; i++) {
-  comando(comandos[i][0], comandos[i][1]);
+for (iInfo = 0; iInfo < comandosInfo.length; iInfo++) {
+  comando(comandosInfo[iInfo][0], comandosInfo[iInfo][1]);
 }
+
+
