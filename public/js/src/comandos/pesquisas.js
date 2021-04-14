@@ -1,5 +1,5 @@
 const comandos = [
-  ["", ""],
+  ["book ", "Pesquise e ache Informações sobre livros."],
   ["", ""],
   ["", ""],
 
@@ -14,3 +14,9 @@ let i = 0;
 for (i = 0; i < comandos.length; i++) {
   comando(comandos[i][0], comandos[i][1]);
 }
+
+
+/*
+* COLOCAR NO PESQUISAS:
+* -- mc
+*/
