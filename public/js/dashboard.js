@@ -13,6 +13,8 @@ window.onload = () => {
       document.getElementById("display_result").innerText = `${req.response}`;
     };
     console.log(req);
-    console.log(JSON.parse(req.response));
+    console.log(req.response.nick)
+    const json = `{"nick":"Sol ⛭","avatar":"a_f1757d00ddda80f92ae7ef357ab550cb"}`
+    console.log(JSON.parse(json));
   }
 };
