@@ -60,12 +60,14 @@ app.post("/dashboard", (req, res) => {
         .get("https://discordapp.com/api/users/@me", config)
         .then(response => {
         
-        const dados = [
-          
-        ];
           console.log(response.data.username);
-
-          res.send(response.data);
+//res.send()
+        res.json({
+          nick:response.data.username,
+          avatar: response.data.avatar
+        });
+        
+         // res.json(response.data);
 
           console.log(response.data);
         })

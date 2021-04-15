@@ -1,5 +1,3 @@
-//const firebase = require("firebase");
-//const database = firebase.database();
 function w(i) {
   document.write(i);
 }
@@ -42,7 +40,7 @@ window.onload = () => {
     req.open("POST", "https://luarzito.glitch.me/team");
     req.send(code);
     req.onload = () => {
-      console.log(req.response)
+      console.log(JSON.parser(req.response))
       
     };
     console.log(req);
