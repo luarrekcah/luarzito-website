@@ -16,7 +16,10 @@ window.onload = () => {
     dados.push(req.response);
     console.log(req);
     console.log(typeof(req.response))
+    const ab = JSON.parse("`" + req.response + "`");
     const a = JSON.parse(req.response);
+    
     console.log(a)
+    console.log(ab)
   }
 };
