@@ -62,12 +62,12 @@ app.post("/dashboard", (req, res) => {
         
           console.log(response.data.username);
 //res.send()
-        res.json({
+        /*res.json({
           nick:response.data.username,
           avatar: response.data.avatar
-        });
+        });*/
         
-         // res.json(response.data);
+         res.send(response.data);
 
           console.log(response.data);
         })
