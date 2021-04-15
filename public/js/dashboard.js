@@ -10,10 +10,9 @@ window.onload = () => {
     req.open("POST", "https://luarzito.glitch.me/dashboard");
     req.send(code);
     req.onload = () => {
-      document.getElementById(
-        "display_result"
-      ).innerText = `${req.response}`;
+      document.getElementById("display_result").innerText = `${req.response}`;
     };
     console.log(req);
+    console.log(JSON.parse(req.response));
   }
 };

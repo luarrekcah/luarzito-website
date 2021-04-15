@@ -40,9 +40,10 @@ window.onload = () => {
     req.open("POST", "https://luarzito.glitch.me/team");
     req.send(code);
     req.onload = () => {
-      console.log(JSON.parser(req.response))
+      
       
     };
+    
     console.log(req);
   }
 };
