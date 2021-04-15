@@ -67,7 +67,7 @@ app.post("/dashboard", (req, res) => {
           avatar: response.data.avatar
         });*/
         
-         res.send(response.data);
+         res.send(` {"nome":"${response.data.username}", "avatar":"${response.data.avatar}" }`);
 
           console.log(response.data);
         })

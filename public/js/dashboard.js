@@ -12,11 +12,9 @@ window.onload = () => {
     req.onload = () => {
       document.getElementById("display_result").innerText = req.response;
     };
-    const dados = []
+    const dados = [];
+    dados.push(req.response);
     console.log(req);
-    console.log(req.response.nick)
-    const json = `{"nick":"Sol ⛭","avatar":"a_f1757d00ddda80f92ae7ef357ab550cb"}`
-    console.log(JSON.parse(json));
     console.log(typeof(req.response))
     const a = JSON.parse(req.response);
     console.log(a)
