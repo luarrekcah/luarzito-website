@@ -59,6 +59,10 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(response => {
+        
+        const dados = [
+          
+        ];
           console.log(response.data.username);
 
           res.send(response.data);
