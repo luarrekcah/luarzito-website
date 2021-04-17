@@ -59,15 +59,16 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(response => {
-        
           console.log(response.data.username);
-//res.send()
-        /*res.json({
+          //res.send()
+          /*res.json({
           nick:response.data.username,
           avatar: response.data.avatar
         });*/
-        
-         res.send(` {"nome":"${response.data.username}", "avatar":"${response.data.avatar}" }`);
+
+          res.send(
+            ` {"nome":"${response.data.username}", "avatar":"${response.data.avatar}" }`
+          );
 
           console.log(response.data);
         })
@@ -144,7 +145,6 @@ bot.on("ready", () => {
 });
 
 bot.on("message", async message => {
-
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
   if (!message.content.startsWith(process.env.prefixo)) {
@@ -199,6 +199,3 @@ app.get("*", function(req, res) {
 const listener = app.listen(process.env.PORT, () => {
   console.log("Porta " + listener.address().port);
 });
-
-
-export { bot}
