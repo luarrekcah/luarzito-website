@@ -1,4 +1,3 @@
-import bot from "server.js";
 
 window.onload = () => {
   const code = location.href.substring(

@@ -199,3 +199,5 @@ app.get("*", function(req, res) {
 const listener = app.listen(process.env.PORT, () => {
   console.log("Porta " + listener.address().port);
 });
+
+module.exports = app;
