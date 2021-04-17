@@ -12,16 +12,17 @@ const meta = {
 };
 
 const cardView = {
-  propriedade:"og:image",
-  iconeFoto: "link-img",
-  titulo:"Luarzito BOT",
-  cor:"#114477",
-  url:"https://luarzito.glitch.me/",
-  descricao: "Página do Luarzito bot, veja meus comandos, resumo e servidor de suporte aqui!",
-  keywords: "Luarzito, Luarzito Discord Bot, Luarzito bot, luarzito discord, discord bot, Discord Bot, Bot, Discord"
-  
-}
-
+  propriedade: "og:image",
+  iconeFoto:
+    "https://cdn.discordapp.com/icons/742068003583295619/7485a625bb9e2711172a3d2b7028a8ca.png?size=1024",
+  titulo: "Luarzito BOT",
+  cor: "#114477",
+  url: "https://luarzito.glitch.me/",
+  descricao:
+    "Página do Luarzito bot, veja meus comandos, resumo e servidor de suporte aqui!",
+  keywords:
+    "Luarzito, Luarzito Discord Bot, Luarzito bot, luarzito discord, discord bot, Discord Bot, Bot, Discord"
+};
 
 document.write(`
 
@@ -29,7 +30,7 @@ document.write(`
   <meta property="og:type" content="website">
   <meta property="og:url" content="${cardView.url}">
   <meta property="og:site_name" content="${cardView.titulo}">
-  <meta property="og:keywords" content="">
+  <meta property="og:keywords" content="${cardView.keywords}">
   <meta property="og:locale" content="pt-BR">
   <meta data-react-helmet="true" property="og:title" content="${cardView.titulo}">
   <meta data-react-helmet="true" property="og:description" content="${cardView.descricao}">
@@ -56,5 +57,5 @@ document.write(`
       content="${meta.content}"
       charset="${meta.charset}"
     />
-    <!icon-fim-->
+    <!--iconFim-->
 `);
