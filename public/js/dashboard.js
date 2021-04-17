@@ -1,3 +1,5 @@
+import bot from "server.js";
+
 window.onload = () => {
   const code = location.href.substring(
     location.href.indexOf("code") + 5,
@@ -15,11 +17,11 @@ window.onload = () => {
     const dados = [];
     dados.push(req.response);
     console.log(req);
-    console.log(typeof(req.response))
+    console.log(typeof req.response);
     const ab = JSON.parse("`" + req.response + "`");
     const a = JSON.parse(req.response);
-    
-    console.log(a)
-    console.log(ab)
+
+    console.log(a);
+    console.log(ab);
   }
 };
