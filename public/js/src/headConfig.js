@@ -11,7 +11,40 @@ const meta = {
   charset: "UTF-8"
 };
 
+const cardView = {
+  propriedade:"og:image",
+  iconeFoto: "link-img",
+  titulo:"Luarzito BOT",
+  cor:"#114477",
+  url:"https://luarzito.glitch.me/",
+  descricao: "Página do Luarzito bot, veja meus comandos, resumo e servidor de suporte aqui!",
+  keywords: "Luarzito, Luarzito Discord Bot, Luarzito bot, luarzito discord, discord bot, Discord Bot, Bot, Discord"
+  
+}
+
+
 document.write(`
+
+<!--Views ext ini-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${cardView.url}">
+  <meta property="og:site_name" content="${cardView.titulo}">
+  <meta property="og:keywords" content="">
+  <meta property="og:locale" content="pt-BR">
+  <meta data-react-helmet="true" property="og:title" content="${cardView.titulo}">
+  <meta data-react-helmet="true" property="og:description" content="${cardView.descricao}">
+  <meta data-react-helmet="true" property="description" content="${cardView.descricao}">
+  <meta data-react-helmet="true" property="og:image" content="${cardView.iconeFoto}">
+  <meta name="theme-color" content="${cardView.cor}"/>
+  <!--twt-->
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@_luarrekcah">
+<meta name="twitter:creator" content="@_luarrekcah">
+<meta name="twitter:title" content="${cardView.titulo}">
+<meta name="twitter:description" content="${cardView.descricao}">
+<meta name="twitter:image" content="${cardView.iconeFoto}">
+  <!--twt-->
+<!--icon-->
 <link
       rel="icon"
       href="${icone.link}"
@@ -23,4 +56,5 @@ document.write(`
       content="${meta.content}"
       charset="${meta.charset}"
     />
+    <!icon-fim-->
 `);
