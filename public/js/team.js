@@ -1,3 +1,15 @@
+ var firebaseConfig = {
+    apiKey: process.env.FB_apiKey,
+    authDomain: process.env.FB_authDomain,
+    databaseURL: process.env.FB_databaseURL,
+    projectId: process.env.FB_projectID,
+    storageBucket: process.env.FB_storageBucket,
+    messagingSenderId: process.env.FB_messagingSenderId,
+    appId: process.env.FB_appId
+  };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 function w(i) {
   document.write(i);
 }
@@ -48,24 +60,7 @@ window.onload = () => {
   }
 };
 
-/*
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebase);
-}
 
-let dbref = database.ref(`Staff/`);
-  
-dbref
-    .once("value")
-    .then(async function(db) {
-  
-  if (db.val() == null) {
-      return w("Parece que não temos staffs no momento... Além do CEO, é claro.")
-  } else {
-    
-  }
-})
-*/
 
 const p1 = {
         //P1 === Raul / Luar Rekcah
