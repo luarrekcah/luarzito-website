@@ -1,9 +1,7 @@
-
-
 function w(i) {
   document.write(i);
 }
-w(`<p style="color: white;">Manutenção</p>`)
+w(`<p style="color: white;">Manutenção</p>`);
 function card(id) {
   w(`
   <div class="card">
@@ -30,44 +28,40 @@ function card(id) {
     `);
 }
 
+database
+  .ref(`Staff`)
+  .once("value")
+  .then(async function(db) {
+    const p1 = {
+      //P1 === Raul / Luar Rekcah
+      avatar: db.val().p1.avatar,
+      nome: db.val().p1.nome + "#" + db.val().p1.discriminador,
+      cargo: "CEO | Desenvolvedor",
+      redeSocialLink: "",
+      redeSocialIcone: ""
+    };
+    const p2 = {
+      //P2 === Bia
+      avatar: db.val().p2.avatar,
+      nome: db.val().p2.nome + "#" + db.val().p2.discriminador,
+      cargo: "CPO",
+      redeSocialLink: "",
+      redeSocialIcone: ""
+    };
 
-  /*
-const p1 = {
-        //P1 === Raul / Luar Rekcah
-        avatar:
-          db.val().p1.avatar,
-        nome: db.val().p1.nome + "#" + db.val().p1.discriminador,
-        cargo: "CEO | Desenvolvedor",
-        redeSocialLink: "",
-        redeSocialIcone: ""
-      };
-      const p2 = {
-        //P2 === Bia
-        avatar: db.val().p2.avatar,
-        nome: db.val().p2.nome + "#" + db.val().p2.discriminador,
-        cargo: "CPO",
-        redeSocialLink: "",
-        redeSocialIcone: ""
-      };
+    const p3 = {
+      //P3 === Angel
+      avatar:
+        "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
+      nome: "Angel ツ#3912",
+      cargo: "COO",
+      redeSocialLink: "",
+      redeSocialIcone: ""
+    };
 
-      const p3 = {
-        //P3 === Angel
-        avatar:
-          "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
-        nome: "Angel ツ#3912",
-        cargo: "COO",
-        redeSocialLink: "",
-        redeSocialIcone: ""
-      };
+    //Cards
 
-  
-  
-      //Cards
-
-      card(p1);
-      card(p2);
-      card(p3);
-
-  
-  
-  */
+    card(p1);
+    card(p2);
+    card(p3);
+  });
