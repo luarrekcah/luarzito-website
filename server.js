@@ -14,6 +14,10 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
+
+app.get("/teste", (req, res) => {
+  res.sendFile(__dirname + "/views/teste.html");
+});
 // PC
 app.get("/comandos", (request, response) => {
   response.sendFile(__dirname + "/views/comandos.html");
