@@ -28,6 +28,28 @@ function card(id) {
     `);
 }
 
+var config = {
+  firebaseConfig: {
+    //apiKey: "",
+    authDomain: "luarzito-bot-d38ff.firebaseapp.com",
+    databaseURL: "https://luarzito-bot-d38ff.firebaseio.com",
+    projectId: "luarzito-bot-d38ff",
+    storageBucket: "luarzito-bot-d38ff.appspot.com",
+    messagingSenderId: "598366956360",
+    appId: "1:598366956360:web:d2e2177d1c5f9522e4e17d"
+  },
+  checkSystem: {
+    time: 60000
+  }
+};
+
+firebase.initializeApp(config.firebaseConfig);
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebase);
+}
+const database = firebase.database();
+
 database
   .ref(`Staff`)
   .once("value")
@@ -51,9 +73,8 @@ database
 
     const p3 = {
       //P3 === Angel
-      avatar:
-        "https://cdn.discordapp.com/avatars/740298343783202865/68d0d5d5882413f1ee012d01dece6e9f.png?size=1024",
-      nome: "Angel ツ#3912",
+      avatar: db.val().p3.avatar,
+      nome: db.val().p3.nome + "#" + db.val().p3.discriminador,
       cargo: "COO",
       redeSocialLink: "",
       redeSocialIcone: ""
