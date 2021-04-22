@@ -1,15 +1,5 @@
- var firebaseConfig = {
-   // apiKey: process.env.FB_apiKey,
-    authDomain: "luarzito-bot-d38ff.firebaseapp.com",
-    databaseURL: "https://luarzito-bot-d38ff.firebaseio.com",
-    projectId: "luarzito-bot-d38ff",
-    storageBucket: "luarzito-bot-d38ff.appspot.com",
-    messagingSenderId: "598366956360",
-    appId: "1:598366956360:web:d2e2177d1c5f9522e4e17d"
-  };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
+import fire from './fire';
+
 function w(i) {
   document.write(i);
 }
@@ -40,32 +30,8 @@ function card(id) {
     `);
 }
 
-window.onload = () => {
-  const code = location.href.substring(
-    location.href.indexOf("code") + 5,
-    location.href.length
-  );
 
-  if (location.href.indexOf("code") > -1) {
-    const req = new XMLHttpRequest();
-
-    req.open("POST", "https://luarzito.glitch.me/team");
-    req.send(code);
-    req.onload = () => {
-      
-      
-    };
-    
-    console.log(req);
-  }
-};
-
-
-database
-    .ref(`Staff`)
-    .once("value")
-    .then(async function(db) {
-  
+  /*
 const p1 = {
         //P1 === Raul / Luar Rekcah
         avatar:
@@ -77,7 +43,7 @@ const p1 = {
       };
       const p2 = {
         //P2 === Bia
-        avatar: db.val().p2.nome + "#" + db.val().p2.discriminador
+        avatar: db.val().p2.avatar,
         nome: db.val().p2.nome + "#" + db.val().p2.discriminador,
         cargo: "CPO",
         redeSocialLink: "",
@@ -101,12 +67,7 @@ const p1 = {
       card(p1);
       card(p2);
       card(p3);
-      
-});
 
   
   
-  
-  
-  
-  
+  */
