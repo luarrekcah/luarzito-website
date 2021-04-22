@@ -1,11 +1,11 @@
  var firebaseConfig = {
-    apiKey: process.env.FB_apiKey,
-    authDomain: process.env.FB_authDomain,
-    databaseURL: process.env.FB_databaseURL,
-    projectId: process.env.FB_projectID,
-    storageBucket: process.env.FB_storageBucket,
-    messagingSenderId: process.env.FB_messagingSenderId,
-    appId: process.env.FB_appId
+   // apiKey: process.env.FB_apiKey,
+    authDomain: "luarzito-bot-d38ff.firebaseapp.com",
+    databaseURL: "https://luarzito-bot-d38ff.firebaseio.com",
+    projectId: "luarzito-bot-d38ff",
+    storageBucket: "luarzito-bot-d38ff.appspot.com",
+    messagingSenderId: "598366956360",
+    appId: "1:598366956360:web:d2e2177d1c5f9522e4e17d"
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -65,21 +65,20 @@ database
     .ref(`Staff`)
     .once("value")
     .then(async function(db) {
-
   
 const p1 = {
         //P1 === Raul / Luar Rekcah
         avatar:
-          ,
-        nome: "",
+          db.val().p1.avatar,
+        nome: db.val().p1.nome + "#" + db.val().p1.discriminador,
         cargo: "CEO | Desenvolvedor",
         redeSocialLink: "",
         redeSocialIcone: ""
       };
       const p2 = {
         //P2 === Bia
-        avatar: `https://cdn.discordapp.com/avatars/666382842338607134/d82c0c8e2de1449a0653e33cd3a620f2.png?size=2048`,
-        nome: "",
+        avatar: db.val().p2.nome + "#" + db.val().p2.discriminador
+        nome: db.val().p2.nome + "#" + db.val().p2.discriminador,
         cargo: "CPO",
         redeSocialLink: "",
         redeSocialIcone: ""
@@ -95,14 +94,6 @@ const p1 = {
         redeSocialIcone: ""
       };
 
-});
-
-  
-  
-  
-  
-  
-  
   
   
       //Cards
@@ -111,3 +102,11 @@ const p1 = {
       card(p2);
       card(p3);
       
+});
+
+  
+  
+  
+  
+  
+  
