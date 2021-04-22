@@ -1,9 +1,9 @@
-import fire from './fire';
+
 
 function w(i) {
   document.write(i);
 }
-
+w(`<p style="color: white;">Manutenção</p>`)
 function card(id) {
   w(`
   <div class="card">
