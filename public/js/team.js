@@ -9,7 +9,7 @@
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
+const database = firebase.database();
 function w(i) {
   document.write(i);
 }
@@ -61,12 +61,17 @@ window.onload = () => {
 };
 
 
+database
+    .ref(`Staff`)
+    .once("value")
+    .then(async function(db) {
 
+  
 const p1 = {
         //P1 === Raul / Luar Rekcah
         avatar:
-          "https://cdn.discordapp.com/avatars/701953428510736396/8f7c67027d267a293c4a8d74a69f00e4.png?size=2048",
-        nome: "Raul ᵈᵃ ᵇⁱᵃʰ ♡⃤ 🦋⃤#5811",
+          ,
+        nome: "",
         cargo: "CEO | Desenvolvedor",
         redeSocialLink: "",
         redeSocialIcone: ""
@@ -74,7 +79,7 @@ const p1 = {
       const p2 = {
         //P2 === Bia
         avatar: `https://cdn.discordapp.com/avatars/666382842338607134/d82c0c8e2de1449a0653e33cd3a620f2.png?size=2048`,
-        nome: "Biah ᵈᵒ ʳᵃᵘˡ ♡⃤ 🦋⃤#1112",
+        nome: "",
         cargo: "CPO",
         redeSocialLink: "",
         redeSocialIcone: ""
@@ -90,6 +95,16 @@ const p1 = {
         redeSocialIcone: ""
       };
 
+});
+
+  
+  
+  
+  
+  
+  
+  
+  
       //Cards
 
       card(p1);
