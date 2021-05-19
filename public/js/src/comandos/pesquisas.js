@@ -1,7 +1,8 @@
 //Finalizado
 
 const comandosPes = [
-  ["book ", "Pesquise e ache Informações sobre livros."],
+  ["gg", "Pesquise o conteúdo de uma imagem pelo Discord."],
+  ["book", "Pesquise e ache Informações sobre livros."],
   ["clima", "Veja o clima da sua cidade."],
   ["image", "Pesquise imagens, isso é muito útil."],
   ["ipget", "Puxe dados de um IP pelo Discord!"],
