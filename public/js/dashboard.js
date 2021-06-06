@@ -10,17 +10,15 @@ window.onload = () => {
 
     req.open("POST", "https://luarzito.glitch.me/dashboard");
     req.send(code);
+    
+    
     req.onload = () => {
+      
+    var perfil = JSON.parse(req.responseText);
+    
+    console.log(perfil);
       document.getElementById("display_result").innerText = req.response;
     };
-    const dados = [];
-    dados.push(req.response);
-    console.log(req);
-    console.log(typeof req.response);
-    const ab = JSON.parse("`" + req.response + "`");
-    const a = JSON.parse(req.response);
-
-    console.log(a);
-    console.log(ab);
+  
   }
 };

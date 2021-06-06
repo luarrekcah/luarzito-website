@@ -71,7 +71,7 @@ app.post("/dashboard", (req, res) => {
         });*/
 
           res.send(
-            ` {"nome":"${response.data.username}", "avatar":"${response.data.avatar}" }`
+           response.data
           );
 
           console.log(response.data);
