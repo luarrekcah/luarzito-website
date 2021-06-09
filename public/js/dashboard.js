@@ -15,7 +15,8 @@ window.onload = () => {
     req.onload = () => {
       
     var perfil = JSON.parse(req.responseText);
-    
+    document.getElementById("login-btn").style.display = "none";
+      document.getElementeById("login").style.display = "none"
     console.log(perfil);
       document.getElementById("display_result").innerText = req.response;
     };
