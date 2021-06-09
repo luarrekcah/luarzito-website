@@ -5,10 +5,11 @@
   padding: 20px;
 }
 
-#login {
+#login-btn {
   position: absolute;
   top: 50%;
   left: 50%;
+
   /**/
   display: inline-block;
   padding: 15px 25px;
@@ -18,16 +19,18 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #000000;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  color: white;
+  
 }
 
-#login:hover {background-color: #3e8e41}
+#login-btn:hover {background-color: #0048ff}
 
-#login:active {
-  background-color: #3e8e41;
+#login-btn:active {
+  background-color: #0048ff;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
