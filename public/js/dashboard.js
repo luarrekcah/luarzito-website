@@ -16,6 +16,7 @@ window.onload = () => {
       document.getElementById("perfil-foto").src = link;
       document.getElementById("perfil-nome").innerHTML = perfil.username + "#" + perfil.discriminator; 
       document.getElementById("login-btn").style.display = "none";
+      document.getElementById("perfil-foto").style.display = "block";
       document.getElementById("login").style.display = "none";
       document.getElementById("header-login").style.display = "block";
       console.log(perfil);

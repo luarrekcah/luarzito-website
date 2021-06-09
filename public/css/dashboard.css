@@ -1,0 +1,17 @@
+#header-login {
+  display: none;
+  height: fit-content;
+  text-align: right;
+  padding: 20px;
+}
+
+#perfil-nome {
+  display: inline;
+}
+
+#perfil-foto {
+  border-radius: 200px;
+  width: 80px;
+  height: 80px;
+  display: none;
+}
