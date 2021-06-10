@@ -6,30 +6,7 @@
     <!--CONFIGs INI-->
     <script src="/js/src/headConfig.js"></script>
     <!--CONFIGs FIM-->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="/css/dashboard.css" />
     <!--CSS FIM-->
     <!--SCRIPT INI-->
@@ -49,39 +26,24 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-   
   </head>
-  <!--NAV BAR INI-->
-    <div class="nav_bar">
-      <div
-        class="header d-flex flex-column justify-content-between align-items-center"
-      >
-        <nav class="topmenu d-flex justify-content-center">
-          
-        </nav>
-        <div
-          class="server-info d-flex align-items-center flex-column text-center"
-        >
-          <div class="nome_bot">
-            <b class="bot_name">Luarzito</b>
-            <p class="lite_desc">Dashboard</p>
-             
-          <div class="botao_add">
-            <a
-              id="me_add"
-              class="links-suppressor join-btn btn-pill white"
-              href="https://discord.com/api/oauth2/authorize?client_id=743841329334845530&redirect_uri=https%3A%2F%2Fluarzito.glitch.me%2Fdashboard&response_type=code&scope=identify%20guilds"
-        >Login</a
-            >
-          </div>
-        </div>
-      </div>
+  <body>
+    <div id="header-login">
+      <p id="perfil-nome"></p>
+      <img src="aaaa" id="perfil-foto" />
     </div>
-    <!--NAV BAR FIM-->
- 
+    <div id="login">
+      <a
+        id="login-btn"
+        href="https://discord.com/api/oauth2/authorize?client_id=743841329334845530&redirect_uri=https%3A%2F%2Fluarzito.glitch.me%2Fdashboard&response_type=code&scope=identify%20guilds"
+      >
+        LOGIN</a
+      >
+    </div>
+    <div id="display_result"></div>
+    <script src="js/dashboard.js"></script>
+  </body>
 </html>
-
-
 
 <!--
 
@@ -93,6 +55,8 @@
     <div id="login">
       <a
         id="login-btn"
+href="https://discord.com/api/oauth2/authorize?client_id=743841329334845530&redirect_uri=https%3A%2F%2Fluarzito.glitch.me%2Fdashboard&response_type=code&scope=identify%20guilds"
+        
       >
         LOGIN</a
       >
