@@ -1,14 +1,328 @@
 #header-login {
   width: 100%;
   text-align: right;
-  padding: 1%
+  padding: 1%;
+    background-image: linear-gradient(
+    45deg,
+    rgba(101, 128, 233, 0.73) 0%,
+    #1e6db6 100%
+  );
 }
 
 #perfil-foto {
   border-radius: 100%;
   width: 5%;
+  float: right
 }
 
 #perfil-nome {
   display: inline;
+}
+ 
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+html {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  height: 100%;
+}
+body {
+  background-color: black;
+}
+.topmenu d-flex justify-content-center {
+  text-align: center;
+}
+b {
+  color:white;
+}
+.nav_bar {
+  padding: 40px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(101, 128, 233, 0.73) 0%,
+    #1e6db6 100%
+  );
+  position: relative;
+}
+.nav_bar a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0 27px;
+  text-decoration: none;
+  position: relative;
+}
+
+.botao_add a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all ease 300ms;
+}
+
+.nome_bot {
+  width: 100%;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  transition: all 900ms ease;
+}
+
+.nome_bot:hover {
+  color: rgba(0, 0, 0, 0.73);
+}
+
+.bot_name {
+  font-size: 100px;
+}
+.lite_desc {
+  display: inline-block;
+  font-size: 40px;
+}
+
+.botao_nav {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.73);
+  padding: 0 100px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.28);
+  border-radius: 100px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  transition: all 300ms ease;
+  bottom: 0;
+}
+
+.botao_nav:hover {
+  bottom: 10px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.28);
+  background-color: white;
+  color: black;
+}
+
+.linha_nav {
+  display: block;
+  width: 45px;
+  border-bottom: 1px solid none;
+  opacity: 50%;
+}
+
+.btn-pill {
+  height: 50px;
+  width: 500px;
+  padding: 0 100px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.28);
+  border-radius: 100px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  position: relative;
+  transition: all 300ms ease;
+  bottom: 0;
+}
+.btn-pill:hover {
+  bottom: 10px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.28);
+}
+.btn-pill.white {
+  background: #fff;
+  color: #4360ae;
+}
+
+#me_add:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.corpo {
+  background-color: black;
+  padding-left: 40px;
+}
+
+.corpo p {
+  color: rgb(155, 155, 155);
+  font-size: 20px;
+}
+
+#sobre {
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#servidor_dc {
+  padding-top: 20px;
+}
+
+.linha_divisoria {
+  display: inline-block;
+  width: 50%;
+  background-color: rgb(101, 128, 233);
+  padding: 2px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  opacity: 100%;
+}
+
+.discord-widget iframe {
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 70px;
+  width: 100%;
+  transition: all 900ms ease;
+}
+
+.discord-widget iframe:hover {
+  height: 300px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 68px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 86px;
+  margin: 0 0 35px 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 57px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  font-weight: 900;
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+#entrar_sv {
+  text-decoration: none;
+  font-weight: 700;
+  width: auto;
+}
+
+#entrar_sv:hover {
+  background-color: rgb(101, 127, 233);
+  color: black;
+  width: auto;
+}
+
+footer {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(101, 128, 233, 0.73) 0%,
+    #1e6db6 100%
+  );
+  position: relative;
+}
+
+footer p {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.footer_redes_sociais {
+  background-color: rgb(155, 155, 155);
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  border-radius: 40px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.desc_footer {
+  display: inline-block;
+}
+
+.titulo_lado_d {
+  text-align: right;
+}
+
+.lado_direito:hover > .desc_lado_d {
+  font-size: 20px;
+  color: black;
+  font-weight: 900;
+}
+
+.desc_lado_d {
+  transition: all 900ms ease;
+  text-align: right;
+}
+
+.desenvolvido_por {
+  text-align: center;
+}
+
+.redes_sociais {
+  display: inline;
+}
+
+#ig {
+  width: 60px;
+  height: 47px;
+  display: inline-block;
+  transition: all 300ms ease;
+}
+
+#ig:hover {
+  width: 70px;
+  height: 57px;
+}
+
+#tt {
+ width: 50px;
+ height: 50px;
+ display: inline-block;
+ transition: all 300ms ease;
+}
+
+#tt:hover {
+  width: 60px;
+ height: 60px;
 }
