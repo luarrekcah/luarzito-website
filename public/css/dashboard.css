@@ -1,11 +1,12 @@
 #header-login {
+  width: 100%;
   text-align: right;
+  padding: 1%
 }
 
 #perfil-foto {
   border-radius: 100%;
-  width: 10%;
-  display:inline;
+  width: 5%;
 }
 
 #perfil-nome {
