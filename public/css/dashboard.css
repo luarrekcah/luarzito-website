@@ -27,6 +27,7 @@
   padding: 10px;
     text-align: center;
       position: relative;
+  float: left;
 }
 
 .opts {
@@ -36,7 +37,7 @@
 }
 
 .rightnav {
-  back
+  background-color: white;
 }
 
 
