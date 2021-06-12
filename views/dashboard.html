@@ -62,6 +62,22 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="script" href="/js/index.js" />
 
+     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDJoHHm-lFmu2f71wvl5C24o7A2ZJrg5xE",
+        authDomain: "dwalt-website.firebaseapp.com",
+        projectId: "dwalt-website",
+        storageBucket: "dwalt-website.appspot.com",
+        messagingSenderId: "871811994927",
+        appId: "1:871811994927:web:0513592440bea2b84afdda",
+        measurementId: "G-4R2PG7XCPM"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <!--SCRIPT FIM-->
   </head>
 
@@ -127,6 +143,7 @@
         <div class="conteudo">
           <img id="avatar">
           <b id="username">Realize o login para continuar</b>
+          <b id="lennes"></b>
            <div id="display_result"></div>
         </div>
        

@@ -1,6 +1,7 @@
 let escolhas = document.getElementsByClassName("opts");
 let avatar = document.getElementById("avatar");
 let username = document.getElementById("username");
+let ls = document.getElementById("lennes");
 let link, perfil;
 
 window.onload = () => {
@@ -24,6 +25,7 @@ window.onload = () => {
         escolhas[i].style.cursor = "default";
       }
       avatar.src = link;
+      ls.innerText = `L$000`
       username.innerText = `Olá ${perfil.username}!`;
       document.getElementById("display_result").innerText = req.response;
       document.getElementById("me_add").style.display = "none";
