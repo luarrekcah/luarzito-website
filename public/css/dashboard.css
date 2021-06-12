@@ -48,7 +48,13 @@
   width: 75%;
 }
 
+#avatar {
+  width: 50px;
+  border-radius: 100%;
+}
 
+#username {
+}
 /**/
 
 /**/
