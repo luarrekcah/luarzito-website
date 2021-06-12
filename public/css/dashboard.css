@@ -24,11 +24,19 @@
   width: 25%;
     background-color: white;
     height: 500px;
-  padding: 10px
+  padding: 10px;
+    text-align: center;
+      position: relative;
 }
 
 .opts {
-  
+  color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.rightnav {
+  back
 }
 
 
