@@ -1,7 +1,7 @@
 let escolhas = document.getElementsByClassName("opts");
-let avatar = document.getELementeById("avatar");
-let username = document.getELementeById("username");
-let link;
+let avatar = document.getElementById("avatar");
+let username = document.getElementById("username");
+let link, perfil;
 
 window.onload = () => {
   const code = location.href.substring(
@@ -16,14 +16,15 @@ window.onload = () => {
     req.send(code);
 
     req.onload = () => {
-      const perfil = JSON.parse(req.responseText);
+      perfil = JSON.parse(req.responseText);
       link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
       let i;
       for (i = 0; i < escolhas.length; i++) {
         console.log(i);
         escolhas[i].style.cursor = "default";
       }
-
+      avatar.src = link;
+      username.innerText = `Olá ${perfil.username}!`;
       document.getElementById("display_result").innerText = req.response;
       document.getElementById("me_add").style.display = "none";
     };
