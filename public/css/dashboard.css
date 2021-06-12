@@ -1,9 +1,9 @@
 #header-login {
   width: 100%;
-      height: 150px;
+  height: 150px;
   text-align: right;
   padding: 1%;
-    background-image: linear-gradient(
+  background-image: linear-gradient(
     45deg,
     rgba(101, 128, 233, 0.73) 0%,
     #1e6db6 100%
@@ -18,48 +18,37 @@
 #perfil-nome {
   display: inline;
 }
- 
 
 .sidenav {
   width: 25%;
-    background-color: white;
-    height: 500px;
+  background-color: white;
+  height: 500px;
   padding: 10px;
-    text-align: center;
-      position: relative;
+  text-align: center;
+  position: relative;
   float: left;
 }
 
 .opts {
   color: black;
-    font-size: 30px;
-    font-weight: 900;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .rightnav {
   background-color: rgba(0, 0, 0, 0.73);
-    height: 500px;
+  height: 500px;
 }
 
 .conteudo {
-  padding: 40px
+  padding: 40px;
+  float: left;
+  width: 75%;
 }
 
-
 /**/
 
-
-
-
-
-
 /**/
-
-
-
-
-
-
 
 html {
   background-color: rgb(0, 0, 0);
@@ -73,7 +62,7 @@ body {
   text-align: center;
 }
 b {
-  color:white;
+  color: white;
 }
 .nav_bar {
   padding: 40px;
@@ -187,13 +176,11 @@ b {
 
 .corpo {
   background-color: black;
- 
 }
 
 .corpo p {
   color: rgb(155, 155, 155);
   font-size: 20px;
-
 }
 
 #sobre {
@@ -346,13 +333,13 @@ footer p {
 }
 
 #tt {
- width: 50px;
- height: 50px;
- display: inline-block;
- transition: all 300ms ease;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  transition: all 300ms ease;
 }
 
 #tt:hover {
   width: 60px;
- height: 60px;
+  height: 60px;
 }
