@@ -24,16 +24,15 @@ window.onload = () => {
         console.log(i);
         escolhas[i].style.cursor = "default";
       }
-      
-      escolhas.forEach(function(i) {
-        
-         console.log(i);
-      });
       avatar.src = link;
-      ls.innerText = `L$000`
+     // ls.innerText = `L$000`
       username.innerText = `Olá ${perfil.username}!`;
       document.getElementById("display_result").innerText = req.response;
       document.getElementById("me_add").style.display = "none";
+      let perfisDB = firebase.database().ref(`Perfis/${perfil.id}`);
+      perfisDB.once("value", db => {
+        ls.innerText = `Lennes: ${db.val().Reais}`
+      });
     };
   }
 };
