@@ -37,7 +37,12 @@
 }
 
 .rightnav {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.73);
+    height: 500px;
+}
+
+.conteudo {
+  padding: 40px
 }
 
 
@@ -188,6 +193,7 @@ b {
 .corpo p {
   color: rgb(155, 155, 155);
   font-size: 20px;
+
 }
 
 #sobre {
