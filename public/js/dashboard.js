@@ -2,6 +2,7 @@ let escolhas = document.getElementsByClassName("opts");
 let avatar = document.getElementById("avatar");
 let username = document.getElementById("username");
 let ls = document.getElementById("lennes");
+let reps = document.getElementById("reps");
 let link, perfil;
 
 window.onload = () => {
@@ -32,6 +33,7 @@ window.onload = () => {
       let perfisDB = firebase.database().ref(`Perfis/${perfil.id}`);
       perfisDB.once("value", db => {
         ls.innerText = `Lennes: ${db.val().Reais}`
+        reps.innerText = `REPs: ${db.val().Reps}`
       });
     };
   }

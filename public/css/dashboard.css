@@ -56,9 +56,13 @@
 #username {
       padding-left: 2%;
 }
-
+#reps{
+  float: right;
+  
+}
 #lennes {
 float: right;
+  padding-left: 10px
 }
 /**/
 
