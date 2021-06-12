@@ -20,10 +20,15 @@
 }
  
 
-#side-nav {
-  width: 50%;
+.sidenav {
+  width: 25%;
     background-color: white;
     height: 500px;
+  padding: 10px
+}
+
+.opts {
+  
 }
 
 
