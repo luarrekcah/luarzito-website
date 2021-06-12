@@ -3,6 +3,7 @@ let avatar = document.getElementById("avatar");
 let username = document.getElementById("username");
 let ls = document.getElementById("lennes");
 let reps = document.getElementById("reps");
+let deletar = document.getElementById("delet");
 let link, perfil;
 
 window.onload = () => {
@@ -34,6 +35,17 @@ window.onload = () => {
       perfisDB.once("value", db => {
         ls.innerText = `Lennes: ${db.val().Reais}`
         reps.innerText = `REPs: ${db.val().Reps}`
+       deletar.syle.display = "block";
+        deletar.addEventListener("click", function() {
+      let confirmacao = confirm(
+        "Deseja apagar os dados?"
+      );
+      if (confirmacao) {
+        perfisDB.child(db.key).remove();
+        location.reload();
+        return false;
+      }
+    });
       });
     };
   }
