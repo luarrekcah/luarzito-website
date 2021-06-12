@@ -1,3 +1,5 @@
+let escolhas = document.getElementsByClassName("opts");
+
 window.onload = () => {
   const code = location.href.substring(
     location.href.indexOf("code") + 5,
@@ -11,14 +13,13 @@ window.onload = () => {
     req.send(code);
 
     req.onload = () => {
-      var perfil = JSON.parse(req.responseText);
+      const perfil = JSON.parse(req.responseText);
       const link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
-     /* document.getElementById("perfil-foto").src = link;
-      document.getElementById("perfil-nome").innerHTML = perfil.username + "#" + perfil.discriminator; 
-      document.getElementById("login-btn").style.display = "none";
-      document.getElementById("perfil-foto").style.display = "block";
-      document.getElementById("login").style.display = "none";
-      document.getElementById("header-login").style.display = "block";*/
+      let i;
+      for(i = 0; i > escolhas.length; i++) {
+        console.log(i);
+        escolhas[i].style.cursor = "default";
+      }
       console.log(perfil);
       document.getElementById("display_result").innerText = req.response;
       document.getElementById("me_add").style.display = "none";
