@@ -13,14 +13,15 @@ window.onload = () => {
     req.onload = () => {
       var perfil = JSON.parse(req.responseText);
       const link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
-      document.getElementById("perfil-foto").src = link;
+     /* document.getElementById("perfil-foto").src = link;
       document.getElementById("perfil-nome").innerHTML = perfil.username + "#" + perfil.discriminator; 
       document.getElementById("login-btn").style.display = "none";
       document.getElementById("perfil-foto").style.display = "block";
       document.getElementById("login").style.display = "none";
-      document.getElementById("header-login").style.display = "block";
+      document.getElementById("header-login").style.display = "block";*/
       console.log(perfil);
       document.getElementById("display_result").innerText = req.response;
+      document.getElementById("me_add").style.display = "none";
     };
   }
 };

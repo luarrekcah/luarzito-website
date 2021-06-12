@@ -20,11 +20,21 @@
 }
  
 
+#side-nav {
+  width: 50%;
+    background-color: white;
+    height: 500px;
+}
+
 
 /**/
 
 
 
+
+
+
+/**/
 
 
 
@@ -158,7 +168,7 @@ b {
 
 .corpo {
   background-color: black;
-  padding-left: 40px;
+ 
 }
 
 .corpo p {
