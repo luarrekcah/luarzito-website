@@ -35,7 +35,7 @@ window.onload = () => {
       perfisDB.once("value", db => {
         ls.innerText = `Lennes: ${db.val().Reais}`
         reps.innerText = `REPs: ${db.val().Reps}`
-       deletar.syle.display = "block";
+       deletar.style.display = "block";
         deletar.addEventListener("click", function() {
       let confirmacao = confirm(
         "Deseja apagar os dados?"
