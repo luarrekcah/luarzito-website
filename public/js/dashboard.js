@@ -1,9 +1,11 @@
-let escolhas = document.getElementsByClassName("opts");
-let avatar = document.getElementById("avatar");
-let username = document.getElementById("username");
-let ls = document.getElementById("lennes");
-let reps = document.getElementById("reps");
-let onLogin = document.getElementById("onLogin");
+const escolhas = document.getElementsByClassName("opts");
+const avatar = document.getElementById("avatar");
+const username = document.getElementById("username");
+const ls = document.getElementById("lennes");
+const reps = document.getElementById("reps");
+const onLogin = document.getElementById("onLogin");
+const aboutButton = document.getElementById("aboutButton");
+const aboutInput = document.getElementById("aboutme");
 let link, perfil;
 
 window.onload = () => {
@@ -36,6 +38,7 @@ window.onload = () => {
       perfisDB.once("value", db => {
         ls.innerText = `Lennes: ${db.val().Reais}`
         reps.innerText = `REPs: ${db.val().Reps}`
+        aboutInput.value = `${db.val().sobremim}`
        onLogin.style.display = "block";
         deletar.addEventListener("click", function() {
       let confirmacao = confirm(
