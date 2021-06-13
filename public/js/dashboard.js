@@ -56,7 +56,8 @@ window.onload = () => {
         "Deseja apagar os dados?"
       );
       if (confirmacao) {
-        perfisDB.child(perfil.id).remove();
+        perfisDB.child(db.key).remove().catch(console.log);
+        
       /*  location.reload();
         return false;*/
       }
