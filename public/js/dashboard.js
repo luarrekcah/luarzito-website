@@ -7,6 +7,7 @@ const onLogin = document.getElementById("onLogin");
 const aboutButton = document.getElementById("aboutButton");
 const aboutInput = document.getElementById("aboutme");
 const deletar = document.getElementById("delet");
+const capa = document.getElementById("capa");
 let link, perfil;
 
 window.onload = () => {
@@ -41,6 +42,7 @@ window.onload = () => {
         reps.innerText = `REPs: ${db.val().Reps}`
         aboutInput.value = `${db.val().sobremim}`
        onLogin.style.display = "block";
+        capa.src = db.val().fundo_perfil
         aboutButton.addEventListener("click", function() {
           
           if(aboutInput.value != db.val().sobremim) {
