@@ -19,6 +19,7 @@ window.onload = () => {
     req.send(code);
 
     req.onload = () => {
+      console.log(req)
       perfil = JSON.parse(req.responseText);
       link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
       let i;
@@ -42,8 +43,8 @@ window.onload = () => {
       );
       if (confirmacao) {
         perfisDB.child(db.key).remove();
-        location.reload();
-        return false;
+      /*  location.reload();
+        return false;*/
       }
     });
       });

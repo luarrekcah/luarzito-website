@@ -82,8 +82,9 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(response => {
-          // console.log(response.data.username);
-          // res.send(response.data.username);
+        res.send(
+           response.data
+          );
           console.log(response.data);
         })
         .catch(error => {
