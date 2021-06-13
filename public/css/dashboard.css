@@ -134,10 +134,12 @@ b {
 
 .bot_name {
   font-size: 100px;
+      text-shadow: -6px 4px 11px #000000;
 }
 .lite_desc {
   display: inline-block;
   font-size: 40px;
+      text-shadow: -6px 4px 11px #000000;
 }
 
 .botao_nav {

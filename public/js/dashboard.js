@@ -42,7 +42,7 @@ window.onload = () => {
         reps.innerText = `REPs: ${db.val().Reps}`
         aboutInput.value = `${db.val().sobremim}`
        onLogin.style.display = "block";
-        capa.style.backgroundImage = "url(`"+db.val().fundo_perfil+"`)"
+        capa.style.backgroundImage = "url("+db.val().fundo_perfil+")"
         aboutButton.addEventListener("click", function() {
           
           if(aboutInput.value != db.val().sobremim) {
