@@ -6,6 +6,7 @@ const reps = document.getElementById("reps");
 const onLogin = document.getElementById("onLogin");
 const aboutButton = document.getElementById("aboutButton");
 const aboutInput = document.getElementById("aboutme");
+const deletar = document.getElementById("delet");
 let link, perfil;
 
 window.onload = () => {
@@ -40,12 +41,22 @@ window.onload = () => {
         reps.innerText = `REPs: ${db.val().Reps}`
         aboutInput.value = `${db.val().sobremim}`
        onLogin.style.display = "block";
+        aboutButton.addEventListener("click", function() {
+          
+          if(aboutInput.value != db.val().sobremim) {
+            perfisDB.update({
+              sobremim: aboutInput.value
+            })
+          } else {
+            return;
+          }
+        })
         deletar.addEventListener("click", function() {
       let confirmacao = confirm(
         "Deseja apagar os dados?"
       );
       if (confirmacao) {
-        perfisDB.child(db.key).remove();
+        perfisDB.child(perfil.id).remove();
       /*  location.reload();
         return false;*/
       }
