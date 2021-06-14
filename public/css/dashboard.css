@@ -54,19 +54,39 @@
 }
 
 #username {
-      padding-left: 2%;
+  padding-left: 2%;
 }
-#reps{
+#reps {
   float: right;
-  
 }
 #lennes {
-float: right;
-  padding-left: 10px
+  float: right;
+  padding-left: 10px;
 }
 
 #onLogin {
-  display:none;
+  display: none;
+}
+
+#aboutButton {
+  border-radius: 10px;
+  background-color: rgb(255 255 255);
+  padding: 0 10px;
+  line-height: 50px;
+  position: relative;
+  font-weight: 900;
+  width: fit-content;
+  color: black;
+  height: fit-content;
+  border-color: #216cb5;
+}
+
+#aboutme {
+  width: fit-content;
+  height: 50px;
+  border-radius: 10px;
+  border-color: #216cb5;
+  padding: 0 30px;
 }
 /**/
 
@@ -134,12 +154,12 @@ b {
 
 .bot_name {
   font-size: 100px;
-      text-shadow: -6px 4px 11px #000000;
+  text-shadow: -6px 4px 11px #000000;
 }
 .lite_desc {
   display: inline-block;
   font-size: 40px;
-      text-shadow: -6px 4px 11px #000000;
+  text-shadow: -6px 4px 11px #000000;
 }
 
 .botao_nav {
