@@ -8,6 +8,7 @@ const aboutButton = document.getElementById("aboutButton");
 const aboutInput = document.getElementById("aboutme");
 const deletar = document.getElementById("delet");
 const capa = document.getElementById("capa");
+const reset = document.getElementById("resetar");
 let link, perfil;
 
 window.onload = () => {
@@ -48,7 +49,7 @@ window.onload = () => {
           if(aboutInput.value != db.val().sobremim) {
             perfisDB.update({
               sobremim: aboutInput.value
-            })
+            }).then(alert("Sua bio foi atualizada."));
           } else {
             return;
           }
@@ -64,6 +65,11 @@ window.onload = () => {
         return false;*/
       }
     });
+            reset.addEventListener("click", function() {
+              perfisDB.set({
+              sobremim: aboutInput.value
+            })
+            })
       });
     };
   }
