@@ -63,10 +63,7 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(response => {
-          
-          res.send(
-           response.data
-          );
+          res.send(response.data);
 
           console.log(response.data);
         })
@@ -76,10 +73,7 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(response => {
-        res.send(
-           response.data
-          );
-          console.log(response.data);
+          console.log(response);
         })
         .catch(error => {
           console.log(error);
