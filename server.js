@@ -39,6 +39,7 @@ app.get("/dashboard", (request, response) => {
   response.sendFile(__dirname + "/views/dashboard.html");
 });
 app.post("/dashboard", (req, res) => {
+  var user = [];
   const data = new FormData();
   console.log(req.body);
   data.append("client_id", "743841329334845530");
@@ -63,24 +64,24 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(responseUser => {
-        var user = [];
-        
-        user.push(responseUser);
-          console.log(responseUser.data);
-        //guilds
-        axios
+          user.push(responseUser);
+          // console.log(responseUser.data);
+          //guilds
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(responseGuild => {
-          console.log(responseGuild);
-          res.send(user.data);
+          user.push(responseGuild);
+          //  console.log(responseGuild);
+          //console.log(user);
         })
         .catch(error => {
           console.log(error);
         });
-        })
-        .catch(error => {
-          console.log(error);
-        });
+      res.send(user);
       /*axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(response => {

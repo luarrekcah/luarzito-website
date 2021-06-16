@@ -29,7 +29,8 @@ window.onload = () => {
 
     req.onload = () => {
       //SETANDO VARIAVEIS UNDEFINED
-      perfil = JSON.parse(req.responseText);
+      console.log(req)
+    //  perfil = JSON.parse(req.responseText);
       link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
 
       //---------------------------------------------------------------------
