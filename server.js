@@ -39,7 +39,7 @@ app.get("/dashboard", (request, response) => {
   response.sendFile(__dirname + "/views/dashboard.html");
 });
 app.post("/dashboard", (req, res) => {
-  var user = [];
+
   const data = new FormData();
   console.log(req.body);
   data.append("client_id", "743841329334845530");
@@ -61,28 +61,33 @@ app.post("/dashboard", (req, res) => {
           authorization: `Bearer ${data.access_token}`
         }
       };
+    function getUser() {
+      let user = [];
       axios
         .get("https://discordapp.com/api/users/@me", config)
-        .then(responseUser => {
+        .then(async responseUser => {
           user.push(responseUser.data);
      //     res.send(responseUser.data)
         //res.send(user)
-        })
-        .catch(error => {
-          console.log(error);
-        });
-      axios
+         axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
-        .then(responseGuild => {
+        .then( responseGuild => {
        // console.log(responseGuild)
-          user.push(responseGuild);
-        res.send(user);
+       user.push(responseGuild)
+           console.log(user);
+       // res.send(user);
+        })
+        .catch(error => {
+          console.log(error);
+        });
         })
         .catch(error => {
           console.log(error);
         });
      
-     
+
+    }
+    getUser();
     });
 });
 
