@@ -39,7 +39,6 @@ app.get("/dashboard", (request, response) => {
   response.sendFile(__dirname + "/views/dashboard.html");
 });
 app.post("/dashboard", (req, res) => {
-
   const data = new FormData();
   console.log(req.body);
   data.append("client_id", "743841329334845530");
@@ -55,39 +54,37 @@ app.post("/dashboard", (req, res) => {
   })
     .then(response => response.json())
     .then(data => {
-      //console.log(data);
       const config = {
         headers: {
           authorization: `Bearer ${data.access_token}`
         }
       };
-    function getUser() {
-      let user = [];
+    //  let user = [];
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(async responseUser => {
-          user.push(responseUser.data);
-     //     res.send(responseUser.data)
-        //res.send(user)
-         axios
+         // user.push(responseUser.data);
+            res.send(responseUser.data)
+          //res.send(user)
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
-        .then( responseGuild => {
-       // console.log(responseGuild)
-       user.push(responseGuild)
-           console.log(user);
-       // res.send(user);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-        })
-        .catch(error => {
-          console.log(error);
-        });
-     
+        .then(responseGuild => {
+          // console.log(responseGuild)
+         // user.push(responseGuild);
 
-    }
-    getUser();
+         // res.send(user);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    let guilds =  axios
+        .get("https://discordapp.com/api/users/@me/guilds", config);
+    
+console.log("Guilds guilds)
     });
 });
 
