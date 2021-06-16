@@ -55,7 +55,7 @@ app.post("/dashboard", (req, res) => {
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      //console.log(data);
       const config = {
         headers: {
           authorization: `Bearer ${data.access_token}`
@@ -64,9 +64,9 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me", config)
         .then(responseUser => {
-          user.push(responseUser);
-          // console.log(responseUser.data);
-          //guilds
+          user.push(responseUser.data);
+     //     res.send(responseUser.data)
+        //res.send(user)
         })
         .catch(error => {
           console.log(error);
@@ -74,22 +74,15 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(responseGuild => {
+       // console.log(responseGuild)
           user.push(responseGuild);
-          //  console.log(responseGuild);
-          //console.log(user);
+        res.send(user);
         })
         .catch(error => {
           console.log(error);
         });
-      res.send(user);
-      /*axios
-        .get("https://discordapp.com/api/users/@me/guilds", config)
-        .then(response => {
-          console.log(response);
-        })
-        .catch(error => {
-          console.log(error);
-        });*/
+     
+     
     });
 });
 
