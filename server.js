@@ -62,22 +62,33 @@ app.post("/dashboard", (req, res) => {
       };
       axios
         .get("https://discordapp.com/api/users/@me", config)
-        .then(response => {
-          res.send(response.data);
-
-          console.log(response.data);
+        .then(responseUser => {
+        var user = [];
+        
+        user.push(responseUser);
+          console.log(responseUser.data);
+        //guilds
+        axios
+        .get("https://discordapp.com/api/users/@me/guilds", config)
+        .then(responseGuild => {
+          console.log(responseGuild);
+          res.send(user.data);
         })
         .catch(error => {
           console.log(error);
         });
-      axios
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      /*axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(response => {
           console.log(response);
         })
         .catch(error => {
           console.log(error);
-        });
+        });*/
     });
 });
 
