@@ -59,12 +59,12 @@ app.post("/dashboard", (req, res) => {
           authorization: `Bearer ${data.access_token}`
         }
       };
-    //  let user = [];
+      //  let user = [];
       axios
         .get("https://discordapp.com/api/users/@me", config)
-        .then(async responseUser => {
-         // user.push(responseUser.data);
-            res.send(responseUser.data)
+        .then(responseUser => {
+          // user.push(responseUser.data);
+          res.send(responseUser.data);
           //res.send(user)
         })
         .catch(error => {
@@ -73,18 +73,11 @@ app.post("/dashboard", (req, res) => {
       axios
         .get("https://discordapp.com/api/users/@me/guilds", config)
         .then(responseGuild => {
-          // console.log(responseGuild)
-         // user.push(responseGuild);
-
-         // res.send(user);
+        res.send(responseGuild)
         })
         .catch(error => {
           console.log(error);
         });
-    let guilds =  axios
-        .get("https://discordapp.com/api/users/@me/guilds", config);
-    
-console.log("Guilds guilds)
     });
 });
 
