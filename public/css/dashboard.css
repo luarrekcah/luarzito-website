@@ -8,6 +8,8 @@
     rgba(101, 128, 233, 0.73) 0%,
     #1e6db6 100%
   );
+  background-size: cover;
+  position: relative;
 }
 
 #perfil-foto {
@@ -107,13 +109,13 @@
 
 #resetar {
   background-color: rgb(255 255 255);
-    padding: 0 10px;
-    line-height: 50px;
-    position: relative;
-    font-weight: 900;
-    width: fit-content;
-    color: black;
-    height: fit-content;
+  padding: 0 10px;
+  line-height: 50px;
+  position: relative;
+  font-weight: 900;
+  width: fit-content;
+  color: black;
+  height: fit-content;
 }
 /**/
 
