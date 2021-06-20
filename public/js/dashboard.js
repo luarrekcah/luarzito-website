@@ -29,7 +29,7 @@ window.onload = () => {
 
     req.onload = () => {
       //SETANDO VARIAVEIS UNDEFINED
-      console.log(req)
+      console.log(req);
       perfil = JSON.parse(req.responseText);
       link = `https://cdn.discordapp.com/avatars/${perfil.id}/${perfil.avatar}.png?size=1024`;
 
@@ -114,11 +114,24 @@ window.onload = () => {
           }
         });
 
-           //---------------------------------------------------------------------
+        //---------------------------------------------------------------------
 
         //BOTAO 4
         capa.addEventListener("click", function() {
-          let 
+          let link = prompt("Cole o link da sua nova imagem de perfil:");
+          if (!link.startsWith("http"))
+            return alert("Desculpe, mas isto não é um link válido. :c");
+          perfisDB
+            .update({
+              fundo_perfil: link
+            })
+            .then(() => {
+              alert("Sua foto foi atualizada.");
+              capa.style.backgroundImage = "url(" + link + ")";
+            })
+            .catch(erro => {
+              alert(erro);
+            });
         });
 
         //---------------------------------------------------------------------
