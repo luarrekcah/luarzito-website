@@ -59,6 +59,8 @@ app.post("/dashboard", (req, res) => {
           authorization: `Bearer ${data.access_token}`
         }
       };
+    
+    console.log("acess token: " + data.access_token + " n/n/")
       //  let user = [];
       axios
         .get("https://discordapp.com/api/users/@me", config)
