@@ -6,6 +6,8 @@ const createError = require("http-errors"),
   session = require("express-session"),
   passport = require("passport");
 
+  require('dotenv').config();
+
 const app = express();
 
 require('./database.js');

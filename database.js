@@ -1,5 +1,7 @@
 const { initializeApp } = require("@firebase/app");
 
+require('dotenv').config();
+
 const firebaseConfig = {
   apiKey: process.env.apiKey,
   authDomain: process.env.authDomain,
