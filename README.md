@@ -1,4 +1,4 @@
-# Website do Luarzito com bot integrado
+# Website do Luarzito
 
 [Site](https://luarzito.glitch.me/) do bot, veja os comandos e mais algumas outras coisinhas!
 
