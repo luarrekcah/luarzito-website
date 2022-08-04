@@ -1,5 +1,5 @@
 {
-  "name": "Luarzito-website",
+  "name": "luarzito-website",
   "version": "4.0.0",
   "description": "Nova versão do site do bot.",
   "main": "server.js",
@@ -7,18 +7,28 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@firebase/app": "^0.7.29",
+    "@firebase/database": "^0.13.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4"
   },
   "engines": {
     "node": "12.x"
   },
   "repository": {
-    "url": "https://github.com/luarrekcah/luarzito-website"
+    "url": "git+https://github.com/luarrekcah/luarzito-website.git"
   },
   "license": "MIT",
   "keywords": [
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/luarrekcah/luarzito-website/issues"
+  },
+  "homepage": "https://github.com/luarrekcah/luarzito-website#readme",
+  "author": "raulrodrigues"
 }
